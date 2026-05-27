@@ -1,0 +1,21 @@
+{
+  "principle": "Letters, numbers, sounds, colors, codes, codons, and shapes can be address-faces of one field node.",
+  "sample": [
+    {
+      "letter": "A",
+      "decimal": 65,
+      "binary": "01000001",
+      "morse": ".-",
+      "phonetic": "Alpha",
+      "addressFace": "alphabet-code-sound"
+    },
+    {
+      "letter": "B",
+      "decimal": 66,
+      "binary": "01000010",
+      "morse": "-...",
+      "phonetic": "Bravo",
+      "addressFace": "alphabet-code-sound"
+    }
+  ]
+}

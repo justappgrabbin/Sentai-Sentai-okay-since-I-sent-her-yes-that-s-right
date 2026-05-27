@@ -1,0 +1,2 @@
+import React from 'react';
+export function Action({tasks,onPlanDeploy}) { return <main className="page"><h1>Action</h1><p>Deployments, automations, tests, generated outputs, approvals, executions.</p><button onClick={()=>onPlanDeploy('Prepare deployment packet for current Morph OS project')}>Plan Deploy This</button><section className="card"><h3>Orchestrator Tasks</h3>{tasks.map(t=><article className="task" key={t.id}><b>{t.problem?.goal}</b><p>{t.problem?.perceivedProblem}</p><ol>{(t.problem?.nextActions||[]).map(a=><li key={a}>{a}</li>)}</ol></article>)}</section></main> }

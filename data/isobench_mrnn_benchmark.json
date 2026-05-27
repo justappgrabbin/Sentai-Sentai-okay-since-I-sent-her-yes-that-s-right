@@ -1,0 +1,1921 @@
+{
+  "benchmark": {
+    "name": "IsoBench-MRNN",
+    "based_on": "IsoBench (Fu et al. 2024, arXiv:2404.01266)",
+    "adapted_for": "MRNN 5D Architecture",
+    "principle": "Isomorphic representations must produce invariant resonance",
+    "levels": 5,
+    "representations_per_concept": 5,
+    "total_problems": 9,
+    "domains": [
+      "geometry",
+      "color",
+      "emotion",
+      "symbolism"
+    ]
+  },
+  "dimensional_mapping": {
+    "L1_Sensory": "D1 - Impulse/Raw Input",
+    "L2_Structural": "D2 - Polarity/Structure",
+    "L3_Relational": "D3 - Witness/Observer-Node",
+    "L4_Contextual": "D4 - Context/Narrative",
+    "L5_Semantic": "D5 - Meaning/Formal"
+  },
+  "problems": [
+    {
+      "id": "ISO-001",
+      "concept": "Triangle",
+      "meaning_vector": {
+        "shape": "triangle",
+        "sides": 3,
+        "angles": 180,
+        "emotion": "impulse",
+        "dimension": "D1-D2",
+        "gate": "3",
+        "iching": "Creative Heaven (1)"
+      },
+      "representations": {
+        "L1_Sensory": {
+          "modality": "image",
+          "format": "200x200 PNG",
+          "content": "RGB pixel array of equilateral triangle, red fill (#FF0000), blue background (#0000FF), rotation 0\u00b0",
+          "dimensional_mapping": "D1: impulse/raw input",
+          "data": {
+            "vertices": [
+              [
+                100,
+                20
+              ],
+              [
+                20,
+                180
+              ],
+              [
+                180,
+                180
+              ]
+            ],
+            "fill_rgb": [
+              255,
+              0,
+              0
+            ],
+            "bg_rgb": [
+              0,
+              0,
+              255
+            ],
+            "rotation_deg": 0,
+            "size_px": 160
+          }
+        },
+        "L2_Structural": {
+          "modality": "code",
+          "format": "Python AST",
+          "content": "draw_triangle(vertices=[[100,20],[20,180],[180,180]], fill='#FF0000', bg='#0000FF')",
+          "dimensional_mapping": "D2: polarity/structure",
+          "data": {
+            "ast": {
+              "type": "Call",
+              "func": "draw_triangle",
+              "args": [
+                {
+                  "name": "vertices",
+                  "value": [
+                    [
+                      100,
+                      20
+                    ],
+                    [
+                      20,
+                      180
+                    ],
+                    [
+                      180,
+                      180
+                    ]
+                  ]
+                },
+                {
+                  "name": "fill",
+                  "value": "#FF0000"
+                },
+                {
+                  "name": "bg",
+                  "value": "#0000FF"
+                }
+              ]
+            },
+            "tokens": [
+              "draw",
+              "triangle",
+              "vertices",
+              "fill",
+              "bg"
+            ]
+          }
+        },
+        "L3_Relational": {
+          "modality": "graph",
+          "format": "adjacency + attributes",
+          "content": "3-node cycle graph with color attributes and spatial positions",
+          "dimensional_mapping": "D3: witness/observer-node",
+          "data": {
+            "nodes": [
+              {
+                "id": 0,
+                "label": "vertex_A",
+                "pos": [
+                  100,
+                  20
+                ],
+                "color": "red"
+              },
+              {
+                "id": 1,
+                "label": "vertex_B",
+                "pos": [
+                  20,
+                  180
+                ],
+                "color": "red"
+              },
+              {
+                "id": 2,
+                "label": "vertex_C",
+                "pos": [
+                  180,
+                  180
+                ],
+                "color": "red"
+              }
+            ],
+            "edges": [
+              {
+                "from": 0,
+                "to": 1,
+                "relation": "connects"
+              },
+              {
+                "from": 1,
+                "to": 2,
+                "relation": "connects"
+              },
+              {
+                "from": 2,
+                "to": 0,
+                "relation": "connects"
+              }
+            ],
+            "attributes": {
+              "fill": "red",
+              "background": "blue",
+              "closure": "cycle"
+            }
+          }
+        },
+        "L4_Contextual": {
+          "modality": "text",
+          "format": "natural language",
+          "content": "A red triangle stands against a blue background, its three points reaching upward like a flame.",
+          "dimensional_mapping": "D4: context/narrative",
+          "data": {
+            "tokens": [
+              "red",
+              "triangle",
+              "blue",
+              "background",
+              "three",
+              "points",
+              "upward",
+              "flame"
+            ],
+            "entities": [
+              "triangle",
+              "background"
+            ],
+            "attributes": {
+              "triangle": "red",
+              "background": "blue"
+            },
+            "relations": [
+              "stands against",
+              "reaching upward"
+            ],
+            "sentiment": "energetic",
+            "metaphors": [
+              "flame"
+            ]
+          }
+        },
+        "L5_Semantic": {
+          "modality": "math",
+          "format": "formal notation",
+          "content": "\u0394(v\u2081,v\u2082,v\u2083) where v\u2081=(100,20), v\u2082=(20,180), v\u2083=(180,180); C_fill=(1,0,0), C_bg=(0,0,1)",
+          "dimensional_mapping": "D5: meaning/formal",
+          "data": {
+            "type": "Simplex",
+            "dimension": 2,
+            "vertices": [
+              [
+                100,
+                20
+              ],
+              [
+                20,
+                180
+              ],
+              [
+                180,
+                180
+              ]
+            ],
+            "color_space": "RGB",
+            "fill": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "background": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "invariant": "3-sided polygon with minimal area for given perimeter",
+            "symmetry_group": "D\u2083",
+            "angle_sum": 180
+          }
+        }
+      }
+    },
+    {
+      "id": "ISO-002",
+      "concept": "Circle",
+      "meaning_vector": {
+        "shape": "circle",
+        "sides": "infinite",
+        "angles": 360,
+        "emotion": "wholeness",
+        "dimension": "D5/recursion",
+        "gate": "0",
+        "iching": "Receptive Earth (2)"
+      },
+      "representations": {
+        "L1_Sensory": {
+          "modality": "image",
+          "format": "200x200 PNG",
+          "content": "RGB pixel array of circle, green fill (#00FF00), black background (#000000), center at (100,100), radius 60",
+          "dimensional_mapping": "D1: impulse/raw input",
+          "data": {
+            "center": [
+              100,
+              100
+            ],
+            "radius": 60,
+            "fill_rgb": [
+              0,
+              255,
+              0
+            ],
+            "bg_rgb": [
+              0,
+              0,
+              0
+            ],
+            "circumference": 376.99,
+            "area": 11309.73
+          }
+        },
+        "L2_Structural": {
+          "modality": "code",
+          "format": "Python AST",
+          "content": "draw_circle(center=(100,100), radius=60, fill='#00FF00', bg='#000000')",
+          "dimensional_mapping": "D2: polarity/structure",
+          "data": {
+            "ast": {
+              "type": "Call",
+              "func": "draw_circle",
+              "args": [
+                {
+                  "name": "center",
+                  "value": [
+                    100,
+                    100
+                  ]
+                },
+                {
+                  "name": "radius",
+                  "value": 60
+                },
+                {
+                  "name": "fill",
+                  "value": "#00FF00"
+                },
+                {
+                  "name": "bg",
+                  "value": "#000000"
+                }
+              ]
+            }
+          }
+        },
+        "L3_Relational": {
+          "modality": "graph",
+          "format": "node with self-loop",
+          "content": "Single node with radial edges to perimeter points, cyclic closure",
+          "dimensional_mapping": "D3: witness/observer-node",
+          "data": {
+            "nodes": [
+              {
+                "id": "center",
+                "pos": [
+                  100,
+                  100
+                ],
+                "color": "green"
+              }
+            ],
+            "edges": [
+              {
+                "from": "center",
+                "to": "perimeter",
+                "relation": "radiates",
+                "distance": 60
+              },
+              {
+                "from": "perimeter",
+                "to": "perimeter",
+                "relation": "cycles",
+                "angle": 360
+              }
+            ],
+            "attributes": {
+              "closure": "infinite_cycle",
+              "symmetry": "continuous"
+            }
+          }
+        },
+        "L4_Contextual": {
+          "modality": "text",
+          "format": "natural language",
+          "content": "A perfect green circle rests in darkness, complete unto itself, with no beginning and no end, a world contained.",
+          "dimensional_mapping": "D4: context/narrative",
+          "data": {
+            "tokens": [
+              "perfect",
+              "green",
+              "circle",
+              "darkness",
+              "complete",
+              "beginning",
+              "end",
+              "world"
+            ],
+            "metaphors": [
+              "world contained",
+              "no beginning and no end"
+            ],
+            "sentiment": "peaceful",
+            "archetype": "mandala"
+          }
+        },
+        "L5_Semantic": {
+          "modality": "math",
+          "format": "formal notation",
+          "content": "C = {(x,y) | (x-100)\u00b2 + (y-100)\u00b2 = 60\u00b2}; C_fill=(0,1,0), C_bg=(0,0,0)",
+          "dimensional_mapping": "D5: meaning/formal",
+          "data": {
+            "type": "Circle",
+            "equation": "(x-100)\u00b2 + (y-100)\u00b2 = 3600",
+            "center": [
+              100,
+              100
+            ],
+            "radius": 60,
+            "color_space": "RGB",
+            "fill": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "symmetry_group": "O(2)",
+            "curvature": 0.016666666666666666,
+            "topology": "S\u00b9"
+          }
+        }
+      }
+    },
+    {
+      "id": "ISO-003",
+      "concept": "Star",
+      "meaning_vector": {
+        "shape": "star",
+        "sides": 10,
+        "points": 5,
+        "emotion": "radiance",
+        "dimension": "D3-D4",
+        "gate": "5",
+        "iching": "Central Radiance"
+      },
+      "representations": {
+        "L1_Sensory": {
+          "modality": "image",
+          "format": "200x200 PNG",
+          "content": "RGB pixel array of 5-point star, yellow fill (#FFFF00), purple background (#800080), rotation 36\u00b0",
+          "dimensional_mapping": "D1: impulse/raw input",
+          "data": {
+            "points": 5,
+            "outer_radius": 80,
+            "inner_radius": 35,
+            "fill_rgb": [
+              255,
+              255,
+              0
+            ],
+            "bg_rgb": [
+              128,
+              0,
+              128
+            ],
+            "rotation_deg": 36
+          }
+        },
+        "L2_Structural": {
+          "modality": "code",
+          "format": "Python AST",
+          "content": "draw_star(points=5, outer_r=80, inner_r=35, fill='#FFFF00', bg='#800080', rotation=36)",
+          "dimensional_mapping": "D2: polarity/structure",
+          "data": {
+            "ast": {
+              "type": "Call",
+              "func": "draw_star",
+              "args": [
+                {
+                  "name": "points",
+                  "value": 5
+                },
+                {
+                  "name": "outer_r",
+                  "value": 80
+                },
+                {
+                  "name": "inner_r",
+                  "value": 35
+                },
+                {
+                  "name": "fill",
+                  "value": "#FFFF00"
+                },
+                {
+                  "name": "bg",
+                  "value": "#800080"
+                },
+                {
+                  "name": "rotation",
+                  "value": 36
+                }
+              ]
+            }
+          }
+        },
+        "L3_Relational": {
+          "modality": "graph",
+          "format": "hub-and-spoke with cycles",
+          "content": "Central hub with 5 radial spokes, each spoke bifurcates to inner and outer points",
+          "dimensional_mapping": "D3: witness/observer-node",
+          "data": {
+            "nodes": [
+              {
+                "id": "center",
+                "type": "hub"
+              },
+              {
+                "id": "tip_0",
+                "angle": 0,
+                "distance": 80
+              },
+              {
+                "id": "tip_1",
+                "angle": 72,
+                "distance": 80
+              },
+              {
+                "id": "tip_2",
+                "angle": 144,
+                "distance": 80
+              },
+              {
+                "id": "tip_3",
+                "angle": 216,
+                "distance": 80
+              },
+              {
+                "id": "tip_4",
+                "angle": 288,
+                "distance": 80
+              },
+              {
+                "id": "valley_0",
+                "angle": 36,
+                "distance": 35
+              },
+              {
+                "id": "valley_1",
+                "angle": 108,
+                "distance": 35
+              },
+              {
+                "id": "valley_2",
+                "angle": 180,
+                "distance": 35
+              },
+              {
+                "id": "valley_3",
+                "angle": 252,
+                "distance": 35
+              },
+              {
+                "id": "valley_4",
+                "angle": 324,
+                "distance": 35
+              }
+            ],
+            "edges": [
+              {
+                "from": "center",
+                "to": "tip_i",
+                "relation": "radiates"
+              },
+              {
+                "from": "tip_i",
+                "to": "valley_i",
+                "relation": "descends"
+              },
+              {
+                "from": "valley_i",
+                "to": "tip_{i+1}",
+                "relation": "ascends"
+              }
+            ]
+          }
+        },
+        "L4_Contextual": {
+          "modality": "text",
+          "format": "natural language",
+          "content": "A golden star bursts forth from violet depths, five rays of light piercing the darkness, a beacon calling from afar.",
+          "dimensional_mapping": "D4: context/narrative",
+          "data": {
+            "tokens": [
+              "golden",
+              "star",
+              "violet",
+              "rays",
+              "light",
+              "darkness",
+              "beacon"
+            ],
+            "metaphors": [
+              "bursts forth",
+              "piercing",
+              "beacon calling"
+            ],
+            "sentiment": "hopeful",
+            "archetype": "guiding_star"
+          }
+        },
+        "L5_Semantic": {
+          "modality": "math",
+          "format": "formal notation",
+          "content": "S\u2085 = \u22c3\u1d62\u208c\u2080\u2074 {R(2\u03c0i/5)\u00b7(0,80), R(2\u03c0i/5+\u03c0/5)\u00b7(0,35)}; C_fill=(1,1,0), C_bg=(0.5,0,0.5)",
+          "dimensional_mapping": "D5: meaning/formal",
+          "data": {
+            "type": "StarPolygon",
+            "schlafli": "{5/2}",
+            "vertices": 10,
+            "symmetry_group": "D\u2085",
+            "rotation": "\u03c0/5",
+            "color_space": "RGB",
+            "fill": [
+              1.0,
+              1.0,
+              0.0
+            ],
+            "density": 2
+          }
+        }
+      }
+    },
+    {
+      "id": "ISO-004",
+      "concept": "Hexagon",
+      "meaning_vector": {
+        "shape": "hexagon",
+        "sides": 6,
+        "emotion": "structure",
+        "dimension": "D2-D3",
+        "gate": "6",
+        "iching": "Conflict (6)"
+      },
+      "representations": {
+        "L1_Sensory": {
+          "modality": "image",
+          "format": "200x200 PNG",
+          "content": "RGB pixel array of hexagon, teal fill (#008080), coral background (#FF7F50), rotation 30\u00b0",
+          "dimensional_mapping": "D1: impulse/raw input",
+          "data": {
+            "vertices": 6,
+            "radius": 70,
+            "fill_rgb": [
+              0,
+              128,
+              128
+            ],
+            "bg_rgb": [
+              255,
+              127,
+              80
+            ],
+            "rotation_deg": 30
+          }
+        },
+        "L2_Structural": {
+          "modality": "code",
+          "format": "Python AST",
+          "content": "draw_polygon(sides=6, radius=70, fill='#008080', bg='#FF7F50', rotation=30)",
+          "dimensional_mapping": "D2: polarity/structure",
+          "data": {
+            "ast": {
+              "type": "Call",
+              "func": "draw_polygon",
+              "args": [
+                {
+                  "name": "sides",
+                  "value": 6
+                },
+                {
+                  "name": "radius",
+                  "value": 70
+                },
+                {
+                  "name": "fill",
+                  "value": "#008080"
+                },
+                {
+                  "name": "bg",
+                  "value": "#FF7F50"
+                },
+                {
+                  "name": "rotation",
+                  "value": 30
+                }
+              ]
+            }
+          }
+        },
+        "L3_Relational": {
+          "modality": "graph",
+          "format": "6-node cycle",
+          "content": "6 nodes in cyclic arrangement, each connected to 2 neighbors, forming a closed hexagonal lattice cell",
+          "dimensional_mapping": "D3: witness/observer-node",
+          "data": {
+            "nodes": [
+              {
+                "id": 0,
+                "angle": 0,
+                "distance": 70
+              },
+              {
+                "id": 1,
+                "angle": 60,
+                "distance": 70
+              },
+              {
+                "id": 2,
+                "angle": 120,
+                "distance": 70
+              },
+              {
+                "id": 3,
+                "angle": 180,
+                "distance": 70
+              },
+              {
+                "id": 4,
+                "angle": 240,
+                "distance": 70
+              },
+              {
+                "id": 5,
+                "angle": 300,
+                "distance": 70
+              }
+            ],
+            "edges": [
+              {
+                "from": 0,
+                "to": 1,
+                "relation": "adjacent"
+              },
+              {
+                "from": 1,
+                "to": 2,
+                "relation": "adjacent"
+              },
+              {
+                "from": 2,
+                "to": 3,
+                "relation": "adjacent"
+              },
+              {
+                "from": 3,
+                "to": 4,
+                "relation": "adjacent"
+              },
+              {
+                "from": 4,
+                "to": 5,
+                "relation": "adjacent"
+              },
+              {
+                "from": 5,
+                "to": 0,
+                "relation": "adjacent"
+              }
+            ],
+            "attributes": {
+              "closure": "hexagonal",
+              "packing": "optimal_2d",
+              "symmetry": "D\u2086"
+            }
+          }
+        },
+        "L4_Contextual": {
+          "modality": "text",
+          "format": "natural language",
+          "content": "Six sides meet in perfect balance, teal against coral, a honeycomb cell holding the sweetness of order.",
+          "dimensional_mapping": "D4: context/narrative",
+          "data": {
+            "tokens": [
+              "six",
+              "sides",
+              "balance",
+              "teal",
+              "coral",
+              "honeycomb",
+              "order"
+            ],
+            "metaphors": [
+              "honeycomb cell",
+              "sweetness of order"
+            ],
+            "sentiment": "structured",
+            "archetype": "hive_mind"
+          }
+        },
+        "L5_Semantic": {
+          "modality": "math",
+          "format": "formal notation",
+          "content": "H\u2086 = {R(k\u03c0/3)\u00b7(0,70) | k=0..5}; C_fill=(0,0.5,0.5), C_bg=(1,0.5,0.31)",
+          "dimensional_mapping": "D5: meaning/formal",
+          "data": {
+            "type": "RegularPolygon",
+            "sides": 6,
+            "symmetry_group": "D\u2086",
+            "interior_angle": 120,
+            "packing_density": 0.9069,
+            "color_space": "RGB",
+            "fill": [
+              0.0,
+              0.5,
+              0.5
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "ISO-005",
+      "concept": "Square",
+      "meaning_vector": {
+        "shape": "square",
+        "sides": 4,
+        "emotion": "stability",
+        "dimension": "D2",
+        "gate": "4",
+        "iching": "Youthful Folly (4)"
+      },
+      "representations": {
+        "L1_Sensory": {
+          "modality": "image",
+          "format": "200x200 PNG",
+          "content": "RGB pixel array of square, white fill (#FFFFFF), black background (#000000), rotation 15\u00b0",
+          "dimensional_mapping": "D1: impulse/raw input",
+          "data": {
+            "vertices": [
+              [
+                50,
+                50
+              ],
+              [
+                150,
+                50
+              ],
+              [
+                150,
+                150
+              ],
+              [
+                50,
+                150
+              ]
+            ],
+            "fill_rgb": [
+              255,
+              255,
+              255
+            ],
+            "bg_rgb": [
+              0,
+              0,
+              0
+            ],
+            "rotation_deg": 15,
+            "side_length": 100
+          }
+        },
+        "L2_Structural": {
+          "modality": "code",
+          "format": "Python AST",
+          "content": "draw_rectangle(top_left=(50,50), width=100, height=100, fill='#FFFFFF', bg='#000000', rotation=15)",
+          "dimensional_mapping": "D2: polarity/structure",
+          "data": {
+            "ast": {
+              "type": "Call",
+              "func": "draw_rectangle",
+              "args": [
+                {
+                  "name": "top_left",
+                  "value": [
+                    50,
+                    50
+                  ]
+                },
+                {
+                  "name": "width",
+                  "value": 100
+                },
+                {
+                  "name": "height",
+                  "value": 100
+                },
+                {
+                  "name": "fill",
+                  "value": "#FFFFFF"
+                },
+                {
+                  "name": "bg",
+                  "value": "#000000"
+                },
+                {
+                  "name": "rotation",
+                  "value": 15
+                }
+              ]
+            }
+          }
+        },
+        "L3_Relational": {
+          "modality": "graph",
+          "format": "4-node cycle with right angles",
+          "content": "4 nodes forming a cycle with 90\u00b0 angles, representing cardinality and foundation",
+          "dimensional_mapping": "D3: witness/observer-node",
+          "data": {
+            "nodes": [
+              {
+                "id": "NW",
+                "pos": [
+                  50,
+                  50
+                ]
+              },
+              {
+                "id": "NE",
+                "pos": [
+                  150,
+                  50
+                ]
+              },
+              {
+                "id": "SE",
+                "pos": [
+                  150,
+                  150
+                ]
+              },
+              {
+                "id": "SW",
+                "pos": [
+                  50,
+                  150
+                ]
+              }
+            ],
+            "edges": [
+              {
+                "from": "NW",
+                "to": "NE",
+                "relation": "horizontal",
+                "length": 100
+              },
+              {
+                "from": "NE",
+                "to": "SE",
+                "relation": "vertical",
+                "length": 100
+              },
+              {
+                "from": "SE",
+                "to": "SW",
+                "relation": "horizontal",
+                "length": 100
+              },
+              {
+                "from": "SW",
+                "to": "NW",
+                "relation": "vertical",
+                "length": 100
+              }
+            ],
+            "attributes": {
+              "closure": "rectangular",
+              "angles": [
+                90,
+                90,
+                90,
+                90
+              ],
+              "symmetry": "D\u2084"
+            }
+          }
+        },
+        "L4_Contextual": {
+          "modality": "text",
+          "format": "natural language",
+          "content": "A white square tilts slightly in the void, four corners holding the world in place, the foundation before all foundations.",
+          "dimensional_mapping": "D4: context/narrative",
+          "data": {
+            "tokens": [
+              "white",
+              "square",
+              "void",
+              "four",
+              "corners",
+              "foundation"
+            ],
+            "metaphors": [
+              "holding the world in place",
+              "foundation before all foundations"
+            ],
+            "sentiment": "grounded",
+            "archetype": "cornerstone"
+          }
+        },
+        "L5_Semantic": {
+          "modality": "math",
+          "format": "formal notation",
+          "content": "\u25a1 = [50,150]\u00d7[50,150] \u2282 \u211d\u00b2; R(15\u00b0)\u00b7\u25a1; C_fill=(1,1,1), C_bg=(0,0,0)",
+          "dimensional_mapping": "D5: meaning/formal",
+          "data": {
+            "type": "Rectangle",
+            "bounds": [
+              [
+                50,
+                50
+              ],
+              [
+                150,
+                150
+              ]
+            ],
+            "rotation": 15,
+            "symmetry_group": "D\u2084",
+            "diagonal": 141.42,
+            "aspect_ratio": 1.0,
+            "color_space": "RGB",
+            "fill": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "ISO-006",
+      "concept": "Pentagon",
+      "meaning_vector": {
+        "shape": "pentagon",
+        "sides": 5,
+        "emotion": "humanity",
+        "dimension": "D3-D4",
+        "gate": "5",
+        "iching": "Waiting (5)"
+      },
+      "representations": {
+        "L1_Sensory": {
+          "modality": "image",
+          "format": "200x200 PNG",
+          "content": "RGB pixel array of pentagon, orange fill (#FFA500), indigo background (#4B0082), rotation 0\u00b0",
+          "dimensional_mapping": "D1: impulse/raw input",
+          "data": {
+            "vertices": 5,
+            "radius": 75,
+            "fill_rgb": [
+              255,
+              165,
+              0
+            ],
+            "bg_rgb": [
+              75,
+              0,
+              130
+            ],
+            "rotation_deg": 0
+          }
+        },
+        "L2_Structural": {
+          "modality": "code",
+          "format": "Python AST",
+          "content": "draw_polygon(sides=5, radius=75, fill='#FFA500', bg='#4B0082', rotation=0)",
+          "dimensional_mapping": "D2: polarity/structure",
+          "data": {
+            "ast": {
+              "type": "Call",
+              "func": "draw_polygon",
+              "args": [
+                {
+                  "name": "sides",
+                  "value": 5
+                },
+                {
+                  "name": "radius",
+                  "value": 75
+                },
+                {
+                  "name": "fill",
+                  "value": "#FFA500"
+                },
+                {
+                  "name": "bg",
+                  "value": "#4B0082"
+                },
+                {
+                  "name": "rotation",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        },
+        "L3_Relational": {
+          "modality": "graph",
+          "format": "5-node cycle",
+          "content": "5 nodes in cyclic arrangement, the human form, the microcosm",
+          "dimensional_mapping": "D3: witness/observer-node",
+          "data": {
+            "nodes": [
+              {
+                "id": 0,
+                "angle": 0,
+                "distance": 75
+              },
+              {
+                "id": 1,
+                "angle": 72,
+                "distance": 75
+              },
+              {
+                "id": 2,
+                "angle": 144,
+                "distance": 75
+              },
+              {
+                "id": 3,
+                "angle": 216,
+                "distance": 75
+              },
+              {
+                "id": 4,
+                "angle": 288,
+                "distance": 75
+              }
+            ],
+            "edges": [
+              {
+                "from": 0,
+                "to": 1,
+                "relation": "adjacent"
+              },
+              {
+                "from": 1,
+                "to": 2,
+                "relation": "adjacent"
+              },
+              {
+                "from": 2,
+                "to": 3,
+                "relation": "adjacent"
+              },
+              {
+                "from": 3,
+                "to": 4,
+                "relation": "adjacent"
+              },
+              {
+                "from": 4,
+                "to": 0,
+                "relation": "adjacent"
+              }
+            ],
+            "attributes": {
+              "closure": "pentagonal",
+              "symmetry": "D\u2085",
+              "golden_ratio": 1.618
+            }
+          }
+        },
+        "L4_Contextual": {
+          "modality": "text",
+          "format": "natural language",
+          "content": "Five sides contain the human form, orange against indigo, the microcosm standing within the macrocosm's deep dream.",
+          "dimensional_mapping": "D4: context/narrative",
+          "data": {
+            "tokens": [
+              "five",
+              "sides",
+              "human",
+              "orange",
+              "indigo",
+              "microcosm",
+              "macrocosm"
+            ],
+            "metaphors": [
+              "human form",
+              "deep dream"
+            ],
+            "sentiment": "contemplative",
+            "archetype": "vitruvian"
+          }
+        },
+        "L5_Semantic": {
+          "modality": "math",
+          "format": "formal notation",
+          "content": "P\u2085 = {R(2\u03c0k/5)\u00b7(0,75) | k=0..4}; \u03c6=(1+\u221a5)/2; C_fill=(1,0.65,0), C_bg=(0.29,0,0.51)",
+          "dimensional_mapping": "D5: meaning/formal",
+          "data": {
+            "type": "RegularPolygon",
+            "sides": 5,
+            "symmetry_group": "D\u2085",
+            "golden_ratio": 1.618,
+            "diagonal_ratio": "\u03c6",
+            "color_space": "RGB",
+            "fill": [
+              1.0,
+              0.65,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "ISO-007",
+      "concept": "Heptagon",
+      "meaning_vector": {
+        "shape": "heptagon",
+        "sides": 7,
+        "emotion": "mystery",
+        "dimension": "D3-D4",
+        "gate": "7",
+        "iching": "Leading (7)"
+      },
+      "representations": {
+        "L1_Sensory": {
+          "modality": "image",
+          "format": "200x200 PNG",
+          "content": "RGB pixel array of heptagon, violet fill (#8B00FF), gold background (#FFD700), rotation 0\u00b0",
+          "dimensional_mapping": "D1: impulse/raw input",
+          "data": {
+            "vertices": 7,
+            "radius": 70,
+            "fill_rgb": [
+              139,
+              0,
+              255
+            ],
+            "bg_rgb": [
+              255,
+              215,
+              0
+            ],
+            "rotation_deg": 0
+          }
+        },
+        "L2_Structural": {
+          "modality": "code",
+          "format": "Python AST",
+          "content": "draw_polygon(sides=7, radius=70, fill='#8B00FF', bg='#FFD700', rotation=0)",
+          "dimensional_mapping": "D2: polarity/structure",
+          "data": {
+            "ast": {
+              "type": "Call",
+              "func": "draw_polygon",
+              "args": [
+                {
+                  "name": "sides",
+                  "value": 7
+                },
+                {
+                  "name": "radius",
+                  "value": 70
+                },
+                {
+                  "name": "fill",
+                  "value": "#8B00FF"
+                },
+                {
+                  "name": "bg",
+                  "value": "#FFD700"
+                },
+                {
+                  "name": "rotation",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        },
+        "L3_Relational": {
+          "modality": "graph",
+          "format": "7-node cycle",
+          "content": "7 nodes in cyclic arrangement, the number of mystery, the days of creation, the notes of the scale",
+          "dimensional_mapping": "D3: witness/observer-node",
+          "data": {
+            "nodes": [
+              {
+                "id": 0,
+                "angle": 0.0,
+                "distance": 70
+              },
+              {
+                "id": 1,
+                "angle": 51.43,
+                "distance": 70
+              },
+              {
+                "id": 2,
+                "angle": 102.86,
+                "distance": 70
+              },
+              {
+                "id": 3,
+                "angle": 154.29,
+                "distance": 70
+              },
+              {
+                "id": 4,
+                "angle": 205.72,
+                "distance": 70
+              },
+              {
+                "id": 5,
+                "angle": 257.15,
+                "distance": 70
+              },
+              {
+                "id": 6,
+                "angle": 308.58,
+                "distance": 70
+              }
+            ],
+            "edges": [
+              {
+                "from": 0,
+                "to": 1,
+                "relation": "adjacent"
+              },
+              {
+                "from": 1,
+                "to": 2,
+                "relation": "adjacent"
+              },
+              {
+                "from": 2,
+                "to": 3,
+                "relation": "adjacent"
+              },
+              {
+                "from": 3,
+                "to": 4,
+                "relation": "adjacent"
+              },
+              {
+                "from": 4,
+                "to": 5,
+                "relation": "adjacent"
+              },
+              {
+                "from": 5,
+                "to": 6,
+                "relation": "adjacent"
+              },
+              {
+                "from": 6,
+                "to": 0,
+                "relation": "adjacent"
+              }
+            ],
+            "attributes": {
+              "closure": "heptagonal",
+              "symmetry": "D\u2087",
+              "constructible": false
+            }
+          }
+        },
+        "L4_Contextual": {
+          "modality": "text",
+          "format": "natural language",
+          "content": "Seven sides hold the mystery, violet against gold, the days of creation sealed in geometry's ancient song.",
+          "dimensional_mapping": "D4: context/narrative",
+          "data": {
+            "tokens": [
+              "seven",
+              "sides",
+              "mystery",
+              "violet",
+              "gold",
+              "creation",
+              "geometry"
+            ],
+            "metaphors": [
+              "days of creation",
+              "ancient song"
+            ],
+            "sentiment": "mystical",
+            "archetype": "seven_seals"
+          }
+        },
+        "L5_Semantic": {
+          "modality": "math",
+          "format": "formal notation",
+          "content": "H\u2087 = {R(2\u03c0k/7)\u00b7(0,70) | k=0..6}; C_fill=(0.55,0,1), C_bg=(1,0.84,0); constructible=False",
+          "dimensional_mapping": "D5: meaning/formal",
+          "data": {
+            "type": "RegularPolygon",
+            "sides": 7,
+            "symmetry_group": "D\u2087",
+            "constructible": false,
+            "color_space": "RGB",
+            "fill": [
+              0.55,
+              0.0,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "ISO-008",
+      "concept": "Octagon",
+      "meaning_vector": {
+        "shape": "octagon",
+        "sides": 8,
+        "emotion": "balance",
+        "dimension": "D2-D4",
+        "gate": "8",
+        "iching": "Holding Together (8)"
+      },
+      "representations": {
+        "L1_Sensory": {
+          "modality": "image",
+          "format": "200x200 PNG",
+          "content": "RGB pixel array of octagon, silver fill (#C0C0C0), maroon background (#800000), rotation 22.5\u00b0",
+          "dimensional_mapping": "D1: impulse/raw input",
+          "data": {
+            "vertices": 8,
+            "radius": 75,
+            "fill_rgb": [
+              192,
+              192,
+              192
+            ],
+            "bg_rgb": [
+              128,
+              0,
+              0
+            ],
+            "rotation_deg": 22.5
+          }
+        },
+        "L2_Structural": {
+          "modality": "code",
+          "format": "Python AST",
+          "content": "draw_polygon(sides=8, radius=75, fill='#C0C0C0', bg='#800000', rotation=22.5)",
+          "dimensional_mapping": "D2: polarity/structure",
+          "data": {
+            "ast": {
+              "type": "Call",
+              "func": "draw_polygon",
+              "args": [
+                {
+                  "name": "sides",
+                  "value": 8
+                },
+                {
+                  "name": "radius",
+                  "value": 75
+                },
+                {
+                  "name": "fill",
+                  "value": "#C0C0C0"
+                },
+                {
+                  "name": "bg",
+                  "value": "#800000"
+                },
+                {
+                  "name": "rotation",
+                  "value": 22.5
+                }
+              ]
+            }
+          }
+        },
+        "L3_Relational": {
+          "modality": "graph",
+          "format": "8-node cycle",
+          "content": "8 nodes in cyclic arrangement, the stop sign, the bagua, the directions of the wind",
+          "dimensional_mapping": "D3: witness/observer-node",
+          "data": {
+            "nodes": [
+              {
+                "id": 0,
+                "angle": 0,
+                "distance": 75
+              },
+              {
+                "id": 1,
+                "angle": 45,
+                "distance": 75
+              },
+              {
+                "id": 2,
+                "angle": 90,
+                "distance": 75
+              },
+              {
+                "id": 3,
+                "angle": 135,
+                "distance": 75
+              },
+              {
+                "id": 4,
+                "angle": 180,
+                "distance": 75
+              },
+              {
+                "id": 5,
+                "angle": 225,
+                "distance": 75
+              },
+              {
+                "id": 6,
+                "angle": 270,
+                "distance": 75
+              },
+              {
+                "id": 7,
+                "angle": 315,
+                "distance": 75
+              }
+            ],
+            "edges": [
+              {
+                "from": 0,
+                "to": 1,
+                "relation": "adjacent"
+              },
+              {
+                "from": 1,
+                "to": 2,
+                "relation": "adjacent"
+              },
+              {
+                "from": 2,
+                "to": 3,
+                "relation": "adjacent"
+              },
+              {
+                "from": 3,
+                "to": 4,
+                "relation": "adjacent"
+              },
+              {
+                "from": 4,
+                "to": 5,
+                "relation": "adjacent"
+              },
+              {
+                "from": 5,
+                "to": 6,
+                "relation": "adjacent"
+              },
+              {
+                "from": 6,
+                "to": 7,
+                "relation": "adjacent"
+              },
+              {
+                "from": 7,
+                "to": 0,
+                "relation": "adjacent"
+              }
+            ],
+            "attributes": {
+              "closure": "octagonal",
+              "symmetry": "D\u2088",
+              "directions": [
+                "N",
+                "NE",
+                "E",
+                "SE",
+                "S",
+                "SW",
+                "W",
+                "NW"
+              ]
+            }
+          }
+        },
+        "L4_Contextual": {
+          "modality": "text",
+          "format": "natural language",
+          "content": "Eight sides mark the directions, silver on maroon, the bagua's mirror reflecting all paths at once.",
+          "dimensional_mapping": "D4: context/narrative",
+          "data": {
+            "tokens": [
+              "eight",
+              "sides",
+              "directions",
+              "silver",
+              "maroon",
+              "bagua",
+              "mirror"
+            ],
+            "metaphors": [
+              "bagua's mirror",
+              "all paths at once"
+            ],
+            "sentiment": "balanced",
+            "archetype": "compass_rose"
+          }
+        },
+        "L5_Semantic": {
+          "modality": "math",
+          "format": "formal notation",
+          "content": "O\u2088 = {R(\u03c0k/4)\u00b7(0,75) | k=0..7}; C_fill=(0.75,0.75,0.75), C_bg=(0.5,0,0)",
+          "dimensional_mapping": "D5: meaning/formal",
+          "data": {
+            "type": "RegularPolygon",
+            "sides": 8,
+            "symmetry_group": "D\u2088",
+            "interior_angle": 135,
+            "color_space": "RGB",
+            "fill": [
+              0.75,
+              0.75,
+              0.75
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "ISO-009",
+      "concept": "Nonagon",
+      "meaning_vector": {
+        "shape": "nonagon",
+        "sides": 9,
+        "emotion": "completion",
+        "dimension": "D3-D5",
+        "gate": "9",
+        "iching": "Small Taming (9)"
+      },
+      "representations": {
+        "L1_Sensory": {
+          "modality": "image",
+          "format": "200x200 PNG",
+          "content": "RGB pixel array of nonagon, crimson fill (#DC143C), emerald background (#50C878), rotation 0\u00b0",
+          "dimensional_mapping": "D1: impulse/raw input",
+          "data": {
+            "vertices": 9,
+            "radius": 70,
+            "fill_rgb": [
+              220,
+              20,
+              60
+            ],
+            "bg_rgb": [
+              80,
+              200,
+              120
+            ],
+            "rotation_deg": 0
+          }
+        },
+        "L2_Structural": {
+          "modality": "code",
+          "format": "Python AST",
+          "content": "draw_polygon(sides=9, radius=70, fill='#DC143C', bg='#50C878', rotation=0)",
+          "dimensional_mapping": "D2: polarity/structure",
+          "data": {
+            "ast": {
+              "type": "Call",
+              "func": "draw_polygon",
+              "args": [
+                {
+                  "name": "sides",
+                  "value": 9
+                },
+                {
+                  "name": "radius",
+                  "value": 70
+                },
+                {
+                  "name": "fill",
+                  "value": "#DC143C"
+                },
+                {
+                  "name": "bg",
+                  "value": "#50C878"
+                },
+                {
+                  "name": "rotation",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        },
+        "L3_Relational": {
+          "modality": "graph",
+          "format": "9-node cycle",
+          "content": "9 nodes in cyclic arrangement, the enneagram, the completion before the decade",
+          "dimensional_mapping": "D3: witness/observer-node",
+          "data": {
+            "nodes": [
+              {
+                "id": 0,
+                "angle": 0,
+                "distance": 70
+              },
+              {
+                "id": 1,
+                "angle": 40,
+                "distance": 70
+              },
+              {
+                "id": 2,
+                "angle": 80,
+                "distance": 70
+              },
+              {
+                "id": 3,
+                "angle": 120,
+                "distance": 70
+              },
+              {
+                "id": 4,
+                "angle": 160,
+                "distance": 70
+              },
+              {
+                "id": 5,
+                "angle": 200,
+                "distance": 70
+              },
+              {
+                "id": 6,
+                "angle": 240,
+                "distance": 70
+              },
+              {
+                "id": 7,
+                "angle": 280,
+                "distance": 70
+              },
+              {
+                "id": 8,
+                "angle": 320,
+                "distance": 70
+              }
+            ],
+            "edges": [
+              {
+                "from": 0,
+                "to": 1,
+                "relation": "adjacent"
+              },
+              {
+                "from": 1,
+                "to": 2,
+                "relation": "adjacent"
+              },
+              {
+                "from": 2,
+                "to": 3,
+                "relation": "adjacent"
+              },
+              {
+                "from": 3,
+                "to": 4,
+                "relation": "adjacent"
+              },
+              {
+                "from": 4,
+                "to": 5,
+                "relation": "adjacent"
+              },
+              {
+                "from": 5,
+                "to": 6,
+                "relation": "adjacent"
+              },
+              {
+                "from": 6,
+                "to": 7,
+                "relation": "adjacent"
+              },
+              {
+                "from": 7,
+                "to": 8,
+                "relation": "adjacent"
+              },
+              {
+                "from": 8,
+                "to": 0,
+                "relation": "adjacent"
+              }
+            ],
+            "attributes": {
+              "closure": "nonagonal",
+              "symmetry": "D\u2089",
+              "enneagram": true
+            }
+          }
+        },
+        "L4_Contextual": {
+          "modality": "text",
+          "format": "natural language",
+          "content": "Nine sides near completion, crimson on emerald, the enneagram's path winding toward the final gate.",
+          "dimensional_mapping": "D4: context/narrative",
+          "data": {
+            "tokens": [
+              "nine",
+              "sides",
+              "completion",
+              "crimson",
+              "emerald",
+              "enneagram",
+              "gate"
+            ],
+            "metaphors": [
+              "winding toward the final gate"
+            ],
+            "sentiment": "anticipatory",
+            "archetype": "enneagram"
+          }
+        },
+        "L5_Semantic": {
+          "modality": "math",
+          "format": "formal notation",
+          "content": "N\u2089 = {R(2\u03c0k/9)\u00b7(0,70) | k=0..8}; C_fill=(0.86,0.08,0.24), C_bg=(0.31,0.78,0.47)",
+          "dimensional_mapping": "D5: meaning/formal",
+          "data": {
+            "type": "RegularPolygon",
+            "sides": 9,
+            "symmetry_group": "D\u2089",
+            "interior_angle": 140,
+            "color_space": "RGB",
+            "fill": [
+              0.86,
+              0.08,
+              0.24
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "consistency_tests": [
+    {
+      "test_id": "T-001",
+      "type": "resonance_invariance",
+      "description": "All 5 representations of the same concept must produce identical resonance vectors",
+      "metric": "cosine_similarity",
+      "threshold": 0.95,
+      "procedure": [
+        "1. Ingest L1_Sensory (image) \u2192 extract semantic particles",
+        "2. Ingest L2_Structural (code) \u2192 extract semantic particles",
+        "3. Ingest L3_Relational (graph) \u2192 extract semantic particles",
+        "4. Ingest L4_Contextual (text) \u2192 extract semantic particles",
+        "5. Ingest L5_Semantic (math) \u2192 extract semantic particles",
+        "6. Compute resonance vector for each",
+        "7. Assert all pairwise cosine similarities > 0.95"
+      ]
+    },
+    {
+      "test_id": "T-002",
+      "type": "transduction_fidelity",
+      "description": "Transducer must preserve meaning when converting between representations",
+      "metric": "resonance_drift",
+      "threshold": 0.05,
+      "procedure": [
+        "1. Take L1 image \u2192 transduce to L4 text \u2192 compute resonance",
+        "2. Take L4 text \u2192 transduce to L1 image \u2192 compute resonance",
+        "3. Compare with direct L1 and L4 resonance",
+        "4. Assert drift < 0.05 for all conversions"
+      ]
+    },
+    {
+      "test_id": "T-003",
+      "type": "emotion_binding",
+      "description": "Color-emotion mapping must be consistent across modalities",
+      "metric": "emotion_classification_accuracy",
+      "threshold": 0.9,
+      "procedure": [
+        "1. Extract color from L1 image",
+        "2. Extract color from L2 code (fill parameter)",
+        "3. Extract color from L4 text (color words)",
+        "4. Map each to emotion via Lindborg lookup",
+        "5. Assert all three map to the same emotion cluster"
+      ]
+    },
+    {
+      "test_id": "T-004",
+      "type": "dimensional_alignment",
+      "description": "Each representation must map to the correct D-layer",
+      "metric": "layer_assignment_accuracy",
+      "threshold": 1.0,
+      "procedure": [
+        "1. L1 must route to D1 (impulse/sensory)",
+        "2. L2 must route to D2 (polarity/structure)",
+        "3. L3 must route to D3 (witness/relational)",
+        "4. L4 must route to D4 (context/narrative)",
+        "5. L5 must route to D5 (meaning/formal)"
+      ]
+    },
+    {
+      "test_id": "T-005",
+      "type": "gate_correspondence",
+      "description": "Shape sides must map to correct I Ching gate",
+      "metric": "gate_accuracy",
+      "threshold": 1.0,
+      "procedure": [
+        "1. Triangle (3) \u2192 Gate 3 (Difficulty at the Beginning)",
+        "2. Square (4) \u2192 Gate 4 (Youthful Folly)",
+        "3. Pentagon (5) \u2192 Gate 5 (Waiting)",
+        "4. Hexagon (6) \u2192 Gate 6 (Conflict)",
+        "5. Heptagon (7) \u2192 Gate 7 (Leading)",
+        "6. Octagon (8) \u2192 Gate 8 (Holding Together)",
+        "7. Nonagon (9) \u2192 Gate 9 (Small Taming)",
+        "8. Circle (0/\u221e) \u2192 Gate 0 (Receptive/Completion)",
+        "9. Star (5/10) \u2192 Gate 5 or 15 (Central Radiance)"
+      ]
+    }
+  ],
+  "training_signals": {
+    "cross_modal_consistency_loss": {
+      "formula": "L_consistency = \u03a3\u1d62<\u2c7c ||Resonance(L\u1d62) - Resonance(L\u2c7c)||\u00b2",
+      "description": "Minimize distance between resonance vectors from different representations of the same concept",
+      "weight": 1.0
+    },
+    "transduction_cycle_loss": {
+      "formula": "L_cycle = ||Resonance(x) - Resonance(T\u207b\u00b9(T(x)))||\u00b2",
+      "description": "Transducer forward + inverse should return to original resonance",
+      "weight": 0.5
+    },
+    "dimensional_routing_loss": {
+      "formula": "L_routing = \u03a3\u2097 CrossEntropy(predicted_D(L\u2097), target_D(L\u2097))",
+      "description": "Correctly route each representation level to its corresponding D-layer",
+      "weight": 0.3
+    },
+    "emotion_color_binding_loss": {
+      "formula": "L_emotion = ||Emotion(Color(L\u2097)) - Emotion(Color(L\u2096))||\u00b2",
+      "description": "Same concept's color must map to same emotion across modalities",
+      "weight": 0.4
+    }
+  }
+}

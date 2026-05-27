@@ -1,0 +1,173 @@
+{
+  "source": "Lindborg et al. (2015) PMC4671663 - Colour Association with Music Is Mediated by Emotion",
+  "doi": "10.1371/journal.pone.0144013",
+  "method": "CIE Lab tablet interface, n=22 participants, 27 film music excerpts",
+  "color_space": "CIE Lab (L*, a*, b*)",
+  "size_range": "0-1 (normalized patch area)",
+  "discrete_emotions": {
+    "anger": {
+      "emotion_rating": 6.39,
+      "size": 0.609,
+      "lightness": 43.2,
+      "a_star": 27.5,
+      "b_star": 22.5,
+      "hex_approx": "#B85C3A",
+      "description": "Large, dark, red-yellow (terracotta)"
+    },
+    "fear": {
+      "emotion_rating": 7.105,
+      "size": 0.556,
+      "lightness": 37.2,
+      "a_star": 15.1,
+      "b_star": 2.2,
+      "hex_approx": "#6B5B5B",
+      "description": "Medium, dark, muted grey"
+    },
+    "happy": {
+      "emotion_rating": 7.775,
+      "size": 0.577,
+      "lightness": 58.1,
+      "a_star": 14.4,
+      "b_star": 31.4,
+      "hex_approx": "#E8A848",
+      "description": "Large, light, yellow (orange)"
+    },
+    "sad": {
+      "emotion_rating": 6.78,
+      "size": 0.521,
+      "lightness": 40.8,
+      "a_star": 9.1,
+      "b_star": -6.7,
+      "hex_approx": "#5A6B7A",
+      "description": "Small, dark, blue-leaning"
+    },
+    "tender": {
+      "emotion_rating": 6.615,
+      "size": 0.507,
+      "lightness": 50.0,
+      "a_star": 5.6,
+      "b_star": -11.2,
+      "hex_approx": "#9A8AB0",
+      "description": "Small, light, red-blue (violet)"
+    }
+  },
+  "dimensional_emotions": {
+    "valence_low": {
+      "emotion_rating": 2.7,
+      "size": 0.59,
+      "lightness": 41.1,
+      "a_star": 39.5,
+      "b_star": 18.8,
+      "hex_approx": "#B87050",
+      "description": "Large, dark, red-yellow"
+    },
+    "valence_high": {
+      "emotion_rating": 7.4,
+      "size": 0.401,
+      "lightness": 53.5,
+      "a_star": 10.7,
+      "b_star": -5.4,
+      "hex_approx": "#8AA898",
+      "description": "Small, light, green-blue"
+    },
+    "energy_low": {
+      "emotion_rating": null,
+      "size": 0.458,
+      "lightness": 46.5,
+      "a_star": -9.6,
+      "b_star": -2.3,
+      "hex_approx": "#7A8A8A",
+      "description": "Small, dark, blue-leaning"
+    },
+    "energy_high": {
+      "emotion_rating": null,
+      "size": null,
+      "lightness": null,
+      "a_star": null,
+      "b_star": null,
+      "hex_approx": "#E8A848",
+      "description": "Large, red-yellow (similar to happy)"
+    },
+    "tension_low": {
+      "emotion_rating": 2.9,
+      "size": null,
+      "lightness": null,
+      "a_star": null,
+      "b_star": null,
+      "hex_approx": "#A0B0A0",
+      "description": "Lighter, easy-going"
+    },
+    "tension_high": {
+      "emotion_rating": null,
+      "size": null,
+      "lightness": null,
+      "a_star": null,
+      "b_star": null,
+      "hex_approx": "#6A6A6A",
+      "description": "Darker, tense"
+    }
+  },
+  "audio_feature_correlations": {
+    "size": {
+      "sharpness": 0.63,
+      "brightness": 0.63,
+      "spectral_entropy": 0.69,
+      "spectral_flux": 0.73,
+      "attack_time": 0.5,
+      "spectral_centroid": 0.53,
+      "rolloff_85": 0.6,
+      "zerocross_rate": 0.53,
+      "fluctuation_strength": 0.44,
+      "spectral_flatness": -0.45
+    },
+    "lightness": {
+      "irregularity": 0.44,
+      "key_clarity": 0.4,
+      "mode": 0.38,
+      "attack_time": 0.42
+    },
+    "a_star": {
+      "spectral_entropy": 0.55,
+      "spectral_spread": -0.4,
+      "irregularity": -0.38,
+      "chromagram_peak_pos": -0.42
+    },
+    "b_star": {
+      "key_clarity": 0.4,
+      "mode": 0.38
+    }
+  },
+  "pls_model_performance_cv_R2": {
+    "size": {
+      "model1_basic": 0.7,
+      "model2_audio_features": 0.7,
+      "model3_with_emotion": 0.75
+    },
+    "lightness": {
+      "model1_basic": 0.54,
+      "model2_audio_features": 0.69,
+      "model3_with_emotion": 0.74
+    },
+    "a_star": {
+      "model1_basic": 0.59,
+      "model2_audio_features": 0.59,
+      "model3_with_emotion": 0.59
+    },
+    "b_star": {
+      "model1_basic": 0.55,
+      "model2_audio_features": 0.66,
+      "model3_with_emotion": 0.66
+    }
+  },
+  "key_findings": [
+    "Emotion mediation robustly explains 60-75% of variance in color associations",
+    "Happy -> light yellow (large)",
+    "Anger -> dark red-yellow/terracotta (large)",
+    "Sad -> dark blue-grey (small)",
+    "Tender -> light violet (small)",
+    "Fear -> dark muted grey (medium)",
+    "Low valence -> large red-yellow; High valence -> small green-blue",
+    "Low energy -> small dark blue; High energy -> large red-yellow",
+    "Low tension -> lighter; High tension -> darker"
+  ]
+}

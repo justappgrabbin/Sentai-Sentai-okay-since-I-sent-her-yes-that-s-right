@@ -1,0 +1,23 @@
+{
+  "name": "synthia-morph-os-v2",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Morph OS v2: recursive field-address OS with smart browser, ingestion, MCP continuity, and problem-oriented orchestrator.",
+  "scripts": {
+    "start": "node scripts/dev.mjs",
+    "dev": "vite --host 0.0.0.0",
+    "server": "node server/mcp-continuity-server.js",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test:smoke": "node scripts/smoke-test.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest"
+  },
+  "devDependencies": {}
+}

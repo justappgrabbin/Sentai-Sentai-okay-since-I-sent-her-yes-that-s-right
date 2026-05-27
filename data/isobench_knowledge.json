@@ -1,0 +1,318 @@
+{
+  "source": "Fu et al. (2024) IsoBench \u2014 arXiv:2404.01266",
+  "url": "https://arxiv.org/abs/2404.01266",
+  "project_page": "https://isobench.github.io/",
+  "huggingface": "https://huggingface.co/datasets/isobench/IsoBench",
+  "conference": "COLM 2024 (First Conference on Language Modeling)",
+  "core_finding": {
+    "statement": "Multimodal foundation models consistently prefer TEXT over IMAGE for the same problem",
+    "key_numbers": {
+      "claude3_opus_image_vs_text_gap": 28.7,
+      "gpt4_turbo_image_vs_text_gap": 18.7,
+      "gemini_pro_image_vs_text_gap": 14.9,
+      "human_preference": "Opposite \u2014 humans show PICTURE SUPERIORITY EFFECT"
+    },
+    "human_contrast": "Humans prefer images (picture superiority effect, Defeyter et al. 2009). Humans generate visual images internally regardless of task modality (Amit et al. 2017). Models do the OPPOSITE."
+  },
+  "dataset_overview": {
+    "total_samples": 1630,
+    "domains": {
+      "mathematics": {
+        "samples": 896,
+        "tasks": [
+          "Even/Odd function classification",
+          "Convex/Concave classification",
+          "Count breakpoints"
+        ],
+        "representations": [
+          "Image (matplotlib plot)",
+          "Text (LaTeX)",
+          "Text (SymPy code)"
+        ],
+        "key_result": "Count breakpoints: Image = 5.9% (Claude-3), Text = 98.4% \u2014 MASSIVE gap"
+      },
+      "science": {
+        "samples": 150,
+        "tasks": [
+          "Physics QA",
+          "Chemistry QA"
+        ],
+        "representations": [
+          "Image (figure + question)",
+          "Text (manual figure description)"
+        ],
+        "key_result": "Chemistry: Image = 69-72%, Text = 85-95%"
+      },
+      "algorithms": {
+        "samples": 384,
+        "tasks": [
+          "Graph Connectivity",
+          "Maximum Flow",
+          "Graph Isomorphism"
+        ],
+        "representations": [
+          "Image (networkx visualization)",
+          "Text (LaTeX adjacency matrix)",
+          "Text (story/description)"
+        ],
+        "key_result": "Max Flow: Image = 12.5-36.7%, Text = 56.3-73.4%"
+      },
+      "games": {
+        "samples": 457,
+        "tasks": [
+          "Winner identification",
+          "Chess puzzles"
+        ],
+        "representations": [
+          "Image (graphical board)",
+          "Text (ANL)",
+          "Text (PGN)",
+          "Text (FEN)"
+        ],
+        "key_result": "Chess puzzles: ALL models near 0% on images, 0.5-4.5% on text"
+      }
+    }
+  },
+  "detailed_results": {
+    "mathematics": {
+      "even_odd": {
+        "image": {
+          "gpt4": 56.3,
+          "gemini": 47.9,
+          "claude3": 43.2,
+          "llava": 24.7
+        },
+        "latex": {
+          "gpt4": 77.1,
+          "gemini": 49.0,
+          "claude3": 73.7
+        },
+        "code": {
+          "gpt4": 67.7,
+          "gemini": 48.2,
+          "claude3": 77.6
+        }
+      },
+      "convex_concave": {
+        "image": {
+          "gpt4": 74.8,
+          "gemini": 54.3,
+          "claude3": 49.6,
+          "llava": 35.2
+        },
+        "latex": {
+          "gpt4": 65.6,
+          "gemini": 85.2,
+          "claude3": 91.4
+        },
+        "code": {
+          "gpt4": 66.0,
+          "gemini": 87.9,
+          "claude3": 93.0
+        }
+      },
+      "count_breakpoints": {
+        "image": {
+          "gpt4": 5.9,
+          "gemini": 1.2,
+          "claude3": 31.7,
+          "llava": 50.0
+        },
+        "latex": {
+          "gpt4": 86.7,
+          "gemini": 100.0,
+          "claude3": 98.4
+        },
+        "code": {
+          "gpt4": 96.1,
+          "gemini": 100.0,
+          "claude3": 90.2
+        }
+      }
+    },
+    "science": {
+      "physics": {
+        "image": {
+          "gpt4": 74.7,
+          "gemini": 61.3,
+          "claude3": 70.7,
+          "llava": 42.7
+        },
+        "text": {
+          "gpt4": 86.7,
+          "gemini": 69.3,
+          "claude3": 89.3
+        }
+      },
+      "chemistry": {
+        "image": {
+          "gpt4": 69.3,
+          "gemini": 72.0,
+          "claude3": 72.0,
+          "llava": 45.3
+        },
+        "text": {
+          "gpt4": 94.7,
+          "gemini": 85.3,
+          "claude3": 90.7
+        }
+      }
+    },
+    "algorithms": {
+      "graph_connectivity": {
+        "image": {
+          "gpt4": 75.8,
+          "gemini": 50.8,
+          "claude3": 53.1
+        },
+        "math": {
+          "gpt4": 80.5,
+          "gemini": 50.0,
+          "claude3": 82.0
+        },
+        "text": {
+          "gpt4": 95.1,
+          "gemini": 75.0,
+          "claude3": 94.5
+        }
+      },
+      "max_flow": {
+        "image": {
+          "gpt4": 36.7,
+          "gemini": 13.3,
+          "claude3": 12.5
+        },
+        "math": {
+          "gpt4": 32.8,
+          "gemini": 15.6,
+          "claude3": 56.3
+        },
+        "text": {
+          "gpt4": 56.3,
+          "gemini": 19.5,
+          "claude3": 73.4
+        }
+      },
+      "graph_isomorphism": {
+        "image": {
+          "gpt4": 50.0,
+          "gemini": 46.9,
+          "claude3": 51.6
+        },
+        "math": {
+          "gpt4": 62.5,
+          "gemini": 47.7,
+          "claude3": 50.0
+        },
+        "text": {
+          "gpt4": 57.0,
+          "gemini": 36.7,
+          "claude3": 53.1
+        }
+      }
+    },
+    "games": {
+      "winner_identification": {
+        "image": {
+          "gpt4": 54.3,
+          "gemini": 45.7,
+          "claude3": 41.5
+        },
+        "anl": {
+          "gpt4": 50.4,
+          "gemini": 27.5,
+          "claude3": 60.1
+        },
+        "pgn": {
+          "gpt4": 85.7,
+          "gemini": 69.8,
+          "claude3": 66.3
+        },
+        "fen": {
+          "gpt4": 50.4,
+          "gemini": 8.1,
+          "claude3": 74.4
+        }
+      },
+      "chess_puzzles": {
+        "image": {
+          "gpt4": 1.0,
+          "gemini": 0.0,
+          "claude3": 0.5
+        },
+        "anl": {
+          "gpt4": 1.0,
+          "gemini": 0.0,
+          "claude3": 1.0
+        },
+        "pgn": {
+          "gpt4": 0.0,
+          "gemini": 0.0,
+          "claude3": 0.5
+        },
+        "fen": {
+          "gpt4": 4.5,
+          "gemini": 1.0,
+          "claude3": 2.0
+        }
+      }
+    }
+  },
+  "prompting_techniques": {
+    "isocombination_isocb": {
+      "description": "Feed ALL isomorphic representations simultaneously to the model",
+      "mechanism": "Construct one unified prompt containing image + text + code representations",
+      "results": {
+        "max_flow_claude3": "75.0% (IsoCB) vs 12.5% (image) vs 73.4% (text) \u2014 +62.5 over image",
+        "connectivity_gpt4": "83.6% (IsoCB) vs 75.8% (image) vs 95.1% (text)",
+        "physics_claude3": "88.0% (IsoCB) vs 70.7% (image) vs 89.3% (text)"
+      },
+      "insight": "Combining modalities can exceed best single modality \u2014 but not always"
+    },
+    "isoscratchpad_isosp": {
+      "description": "Two-step: model describes image in text, then solves using that description",
+      "mechanism": "Step 1: Image \u2192 Text translation. Step 2: Text \u2192 Answer",
+      "results": {
+        "max_flow_claude3": "22.7% (IsoSP) vs 12.5% (image) \u2014 still far below 73.4% text",
+        "connectivity_gpt4": "82.0% (IsoSP) vs 75.8% (image)",
+        "physics_claude3": "78.7% (IsoSP) vs 70.7% (image)"
+      },
+      "insight": "Image-to-text translation loses critical information (counting errors, missed details). The larger the gap between IsoSP and Text, the harder the image is for the model."
+    }
+  },
+  "failure_modes": {
+    "counting_errors": "Vision models fail at explicit enumeration (breakpoints, chemistry objects). Long-standing problem.",
+    "visual_recognition_errors": "Misidentification of visual elements misdirects language generation toward wrong conclusions",
+    "shortcut_learning": "Models can learn to rely ONLY on language and perform weaker when forced to use images",
+    "information_loss_in_translation": "IsoSP-generated descriptions miss critical details (e.g., magnet sizes in physics problems)"
+  },
+  "implications_for_mrnn": {
+    "the_core_problem": "LLMs are NOT modality-agnostic. They have strong representational bias. Your MRNN must be.",
+    "mrnn_advantage_1": "Your 5D stack treats all modalities as traversing the SAME attractor field. Sound, color, text, graph \u2014 all map to the same emotional/geometric manifold. This IS modality-agnostic by design.",
+    "mrnn_advantage_2": "IsoBench proves that isomorphic representations (same info, different form) should produce IDENTICAL reasoning. Your MRNN's message-passing graph doesn't care if a node was ingested as image, text, or audio \u2014 it only cares about its position in the field.",
+    "mrnn_advantage_3": "The 'picture superiority effect' in humans suggests visual processing is DEEPER, not shallower. LLMs fail at images because they process them as tokenized patches, not as structured fields. Your MRNN processes visual input through the same geometric attractor mechanism as text \u2014 no modality encoder needed.",
+    "benchmark_opportunity": "IsoBench is a PERFECT test for your MRNN. Feed the same problem as image, LaTeX, and code \u2014 your engine should produce the SAME answer regardless of input form, because all representations converge to the same field state.",
+    "design_principle": "Do NOT use separate encoders for different modalities. Use a UNIFIED embedding space where image patches, text tokens, and audio features all map to the same 5D manifold. The modality is just the skin \u2014 the field is the substance.",
+    "attention_mechanism": "IsoBench shows attention to the inducing stimulus matters (59% in chromesthesia too). Your D3 witness layer should dynamically weight modalities based on task relevance, not fixed encoder outputs."
+  },
+  "isoBench_as_mrnn_benchmark": {
+    "test_protocol": {
+      "step1": "Ingest IsoBench problem in Image form \u2192 MRNN produces field state F_image",
+      "step2": "Ingest SAME problem in Text form \u2192 MRNN produces field state F_text",
+      "step3": "Measure field distance |F_image - F_text| \u2014 should be near zero for isomorphic inputs",
+      "step4": "Compare answer accuracy across modalities \u2014 MRNN should show NO text bias",
+      "step5": "Test IsoCB equivalent: feed both representations \u2192 MRNN should fuse them in the field",
+      "step6": "Test IsoSP equivalent: MRNN translates image\u2192text internally via field state \u2192 text generation"
+    },
+    "success_criteria": {
+      "field_convergence": "|F_image - F_text| < epsilon for all isomorphic pairs",
+      "accuracy_parity": "Accuracy(Image) \u2248 Accuracy(Text) within 5%",
+      "no_text_bias": "MRNN does NOT show the 15-29 point text bias seen in LLMs",
+      "fusion_benefit": "Combined input accuracy \u2265 max(Image, Text) \u2014 MRNN should gain from multiple representations"
+    },
+    "datasets_to_use": [
+      "isobench/IsoBench on HuggingFace",
+      "1,630 samples across 4 domains"
+    ]
+  }
+}

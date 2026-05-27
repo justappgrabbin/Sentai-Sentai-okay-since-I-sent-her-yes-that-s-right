@@ -1,0 +1,142 @@
+{
+  "source": "Wikipedia - Chromesthesia (sound-to-color synesthesia)",
+  "url": "https://en.wikipedia.org/wiki/Chromesthesia",
+  "definition": {
+    "term": "Chromesthesia",
+    "also_known_as": [
+      "sound-to-color synesthesia",
+      "colored hearing"
+    ],
+    "description": "A type of synesthesia where sound involuntarily evokes color, shape, and movement experiences. The synesthetic color supplements but does not obscure normal auditory perception.",
+    "origin": "First documented by Georg Tobias Ludwig Sachs in 1812; term 'colored hearing' first appeared in 1881 review of Bleuler & Lehmann's work"
+  },
+  "mechanisms": {
+    "cross_activation_theory": {
+      "authors": "Ramachandran & Hubbard",
+      "core_idea": "Adjacent brain regions (e.g., auditory cortex V4 for color) have increased connectivity due to reduced pruning during childhood",
+      "projector_type": "Fusiform gyrus - perceives photisms in external space",
+      "associator_type": "Angular gyrus - perceives photisms in mind's eye",
+      "problem": "Synesthesia should be present from birth but only evident mid-childhood"
+    },
+    "disinhibited_feedback_model": {
+      "core_idea": "No increased connectivity; instead, decreased inhibition in normal brain networks allows cross-activation",
+      "evidence": "Can be acquired via retino-cortical damage, sensory deprivation, meditation, chemical agents",
+      "mechanism": "Feedforward activity from inducer pathway activates convergent neurons; feedback propagates down concurrent pathway"
+    }
+  },
+  "individual_variance": {
+    "idiosyncratic_but_consistent": "Color associations are unique per individual but stable over time",
+    "universal_tendencies": {
+      "high_pitch": "Lighter/brighter colors",
+      "low_pitch": "Darker colors",
+      "voice_pitch": "40% report influence on color",
+      "accent_prosody": "40% report influence",
+      "emotional_inflection": "Influences color for many",
+      "own_mood": "Only 2% report influence"
+    },
+    "projectors_vs_associators": {
+      "projectors": "See colors in external space",
+      "associators": "See colors in mind's eye",
+      "note": "Terms can be misleading; experience is not purely sensory/perceptual for most"
+    },
+    "attention_effects": {
+      "attention_to_stimulus": "59% report influence",
+      "concentration": "Influences experience",
+      "fatigue": "Influences experience",
+      "substances": "Caffeine, alcohol can modulate"
+    }
+  },
+  "drug_induced": {
+    "substances": [
+      "LSD",
+      "mescaline",
+      "psilocybin",
+      "ayahuasca",
+      "hashish"
+    ],
+    "first_report": "Th\u00e9ophile Gautier, 1845 (hashish)",
+    "mechanism": "Non-selective serotonin agonists; affect ongoing transmission streams rather than stimulus-induced activation",
+    "form_constants": {
+      "kluver_categories": [
+        "Tunnels",
+        "Spirals",
+        "Honeycombs/Gratings",
+        "Cobwebs"
+      ],
+      "note": "All hallucinations consist of these shapes; atypical = variations"
+    },
+    "vs_congenital": {
+      "consistency": "Drug-induced is NOT consistent or automatic",
+      "bottom_up": "External stimuli less critical",
+      "all_perceptual_dimensions_affected": [
+        "brightness",
+        "saturation",
+        "luminance",
+        "contrast",
+        "hue"
+      ]
+    }
+  },
+  "composers_with_chromesthesia": {
+    "franz_liszt": {
+      "association": "Asked orchestra to play 'in a Bluer Fashion'",
+      "note": "Synesthesia not a common term in his era; people thought he was tricking them"
+    },
+    "leonard_bernstein": {
+      "description": "Timbre-to-color synesthesia",
+      "behavior": "Stopped orchestras when timbre changed, even if listeners couldn't tell"
+    },
+    "amy_beach": {
+      "association": "Each key signature = particular color",
+      "sensitivity": "Upset when artists changed keys (changed intended emotion)"
+    },
+    "tori_amos": {
+      "experience": "Music as structures of light since early childhood"
+    },
+    "olivier_messiaen": {
+      "influence": "Color of musical keys influenced compositions"
+    },
+    "alexander_scriabin": {
+      "controversy": "Debatable whether genuine synesthete or associative/theosophical system",
+      "theosophy_influence": "System associating colors to feelings/emotions",
+      "clavier_a_lumieres": "Keyboard with lights for 'Prometheus: The Poem of Fire'",
+      "note_to_color_mapping": {
+        "C": "Red",
+        "G": "Orange-pink",
+        "D": "Yellow",
+        "A": "Green",
+        "E": "Whitish-blue",
+        "B": "Similar to E",
+        "F#": "Blue, bright",
+        "Db": "Violet",
+        "Ab": "Purplish-violet",
+        "Eb": "Steel color with metallic sheen",
+        "Bb": "Similar to Eb",
+        "F": "Red, dark"
+      },
+      "circle_of_fifths_spectral": "When ordered by circle of fifths, colors form a spectrum \u2014 casts doubt on genuine chromesthesia",
+      "friend_rimsky_korsakov": "Also synesthete but DIFFERENT mappings; more neutral/spontaneous character"
+    }
+  },
+  "brain_regions": {
+    "V4": "Visual color processing area activated immediately after auditory perception",
+    "inferior_parietal_cortex": "Binds real and synesthetic perceptions into unified experience",
+    "left_superior_temporal_sulcus": "Integrates auditory and visual information; responds to congruent pairs",
+    "high_interconnectivity": "Characteristic of synesthetic brains"
+  },
+  "research_findings": {
+    "synesthetes_vs_nonsynesthetes": "Both match sounds to colors non-arbitrarily; suggests common underlying mechanism",
+    "genetic": "Runs in families but may skip generations; monozygotic twins can differ",
+    "absolute_pitch": "INCREASES local variance in color matching (unexpected)",
+    "semantic_mediation": "Some individuals associate based on note name/belief rather than absolute pitch"
+  },
+  "implications_for_mrnn": {
+    "crossmodal_binding_is_not_arbitrary": "There are universal tendencies (high pitch = light, low pitch = dark)",
+    "emotion_mediates": "Emotional inflection influences color \u2014 aligns with Lindborg et al. 2015",
+    "idiosyncratic_but_consistent": "Each individual has unique mappings but they are stable \u2014 this is LEARNING, not randomness",
+    "attention_matters": "59% report attention influences experience \u2014 attention mechanism is critical",
+    "disinhibition_model_suggests": "Crossmodal associations exist in ALL brains; synesthetes just have less inhibition \u2014 your MRNN should model this as default behavior",
+    "composers_as_evidence": "Musicians with chromesthesia create based on these mappings \u2014 your engine can generate music from color and vice versa",
+    "scriabin_circle_of_fifths": "Spectral ordering suggests HARMONIC relationships map to COLOR relationships \u2014 this is your 64-gate \u2192 color bridge"
+  }
+}

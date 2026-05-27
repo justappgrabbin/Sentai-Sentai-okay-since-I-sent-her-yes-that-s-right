@@ -1,0 +1,16 @@
+{
+  "examples": [
+    {
+      "name": "color-math-chart resonance",
+      "claim": "A color mark in a math procedure and a color band in a symbolic chart can be linked if they occupy equivalent transformation roles.",
+      "test": "verify same role: input/operator/intermediate/output/recovery and repeat across samples",
+      "maturity": "hypothesis"
+    },
+    {
+      "name": "letter-as-field",
+      "claim": "A letter can be addressed by glyph, sound, decimal, binary, morse, braille, codon, prime, and semantic use.",
+      "test": "encode/decode round trip and preserve identity across representations",
+      "maturity": "seed"
+    }
+  ]
+}

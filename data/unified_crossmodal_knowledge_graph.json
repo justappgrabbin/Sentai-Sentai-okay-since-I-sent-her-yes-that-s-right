@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "title": "Unified Crossmodal Knowledge Graph for MRNN",
+    "version": "1.0",
+    "sources": [
+      "Lindborg et al. (2015) PMC4671663",
+      "Wikipedia - Chromesthesia",
+      "Ivanov et al. (2019) arXiv:1910.12091"
+    ],
+    "purpose": "Bridge music, color, emotion, and graph structure for MRNN message passing"
+  },
+  "nodes": {
+    "sound": {
+      "type": "modality",
+      "dimensions": [
+        "pitch",
+        "timbre",
+        "loudness",
+        "duration",
+        "attack",
+        "spectral_centroid"
+      ],
+      "d_level": 1,
+      "description": "Raw acoustic signal - D1 impulse layer"
+    },
+    "color": {
+      "type": "modality",
+      "dimensions": [
+        "lightness",
+        "hue",
+        "saturation",
+        "a_star",
+        "b_star"
+      ],
+      "d_level": 2,
+      "description": "Visual color perception - D2 polarity layer",
+      "space": "CIE Lab"
+    },
+    "shape": {
+      "type": "modality",
+      "dimensions": [
+        "size",
+        "roundness",
+        "complexity",
+        "movement"
+      ],
+      "d_level": 2,
+      "description": "Visual shape perception - D2 polarity layer"
+    },
+    "emotion_discrete": {
+      "type": "emotion_archetype",
+      "values": [
+        "anger",
+        "fear",
+        "happy",
+        "sad",
+        "tender"
+      ],
+      "d_level": 5,
+      "description": "Discrete emotion attractors - D5 meaning layer"
+    },
+    "emotion_dimensional": {
+      "type": "emotion_field",
+      "dimensions": [
+        "valence",
+        "energy",
+        "tension"
+      ],
+      "range": [
+        -1,
+        1
+      ],
+      "d_level": 4,
+      "description": "Continuous emotion coordinates - D4 context layer"
+    },
+    "attention": {
+      "type": "cognitive_mechanism",
+      "d_level": 3,
+      "description": "D3 witness/observer - attention modulates crossmodal binding",
+      "chromesthesia_evidence": "59% of synesthetes report attention influences experience"
+    },
+    "memory": {
+      "type": "cognitive_mechanism",
+      "d_level": 4,
+      "description": "D4 context - learned associations stabilize over time",
+      "chromesthesia_evidence": "Mappings are idiosyncratic but consistent over years"
+    },
+    "V4": {
+      "type": "brain_region",
+      "function": "Color processing",
+      "chromesthesia_role": "Activated immediately after auditory input"
+    },
+    "auditory_cortex": {
+      "type": "brain_region",
+      "function": "Sound processing",
+      "chromesthesia_role": "Inducer pathway"
+    },
+    "inferior_parietal": {
+      "type": "brain_region",
+      "function": "Multisensory binding",
+      "chromesthesia_role": "Binds real and synesthetic perceptions"
+    },
+    "fusiform_gyrus": {
+      "type": "brain_region",
+      "function": "Projector-type chromesthesia",
+      "chromesthesia_role": "External space photisms"
+    },
+    "angular_gyrus": {
+      "type": "brain_region",
+      "function": "Associator-type chromesthesia",
+      "chromesthesia_role": "Mind's eye photisms"
+    }
+  },
+  "edges": {
+    "sound_pitch\u2192color_lightness": {
+      "weight": 0.73,
+      "source": "Lindborg: spectral_flux\u2192size",
+      "type": "direct_correlation",
+      "note": "High pitch = light color (universal tendency)"
+    },
+    "sound_pitch\u2192color_hue": {
+      "weight": 0.55,
+      "source": "Lindborg: spectral_entropy\u2192a_star",
+      "type": "direct_correlation"
+    },
+    "sound\u2192emotion": {
+      "weight": 0.85,
+      "source": "Lindborg: emotion explains 60-75% of color variance",
+      "type": "mediated",
+      "path": "sound \u2192 emotion_discrete \u2192 color"
+    },
+    "emotion\u2192color": {
+      "weight": 0.9,
+      "source": "Lindborg Table 2 + Chromesthesia research",
+      "type": "archetypal_mapping",
+      "mappings": {
+        "happy": {
+          "L": 58.1,
+          "a": 14.4,
+          "b": 31.4,
+          "size": 0.577
+        },
+        "anger": {
+          "L": 43.2,
+          "a": 27.5,
+          "b": 22.5,
+          "size": 0.609
+        },
+        "sad": {
+          "L": 40.8,
+          "a": 9.1,
+          "b": -6.7,
+          "size": 0.521
+        },
+        "fear": {
+          "L": 37.2,
+          "a": 15.1,
+          "b": 2.2,
+          "size": 0.556
+        },
+        "tender": {
+          "L": 50.0,
+          "a": 5.6,
+          "b": -11.2,
+          "size": 0.507
+        }
+      }
+    },
+    "attention\u2192crossmodal_binding": {
+      "weight": 0.59,
+      "source": "Chromesthesia: 59% report attention influence",
+      "type": "modulatory"
+    },
+    "memory\u2192mapping_consistency": {
+      "weight": 0.95,
+      "source": "Chromesthesia: mappings consistent over years",
+      "type": "stabilizing"
+    },
+    "auditory_cortex\u2192V4": {
+      "weight": 1.0,
+      "source": "Cross-activation theory",
+      "type": "anatomical",
+      "mechanism": "Disinhibited feedback or increased connectivity"
+    },
+    "V4\u2192inferior_parietal": {
+      "weight": 1.0,
+      "source": "Binding mechanism",
+      "type": "anatomical"
+    },
+    "auditory_cortex\u2192inferior_parietal": {
+      "weight": 0.8,
+      "source": "Multisensory integration",
+      "type": "anatomical"
+    }
+  },
+  "attractor_fields": {
+    "description": "Emotion attractors in CIE Lab a*b* plane",
+    "field_equation": "M(x) = \u03a3\u1d62 g\u1d62 / (1 + |x - a\u1d62|)",
+    "attractors": [
+      {
+        "name": "happy",
+        "position": [
+          14.4,
+          31.4
+        ],
+        "gravity": 0.577,
+        "basin_radius": 15
+      },
+      {
+        "name": "anger",
+        "position": [
+          27.5,
+          22.5
+        ],
+        "gravity": 0.609,
+        "basin_radius": 12
+      },
+      {
+        "name": "sad",
+        "position": [
+          9.1,
+          -6.7
+        ],
+        "gravity": 0.521,
+        "basin_radius": 10
+      },
+      {
+        "name": "fear",
+        "position": [
+          15.1,
+          2.2
+        ],
+        "gravity": 0.556,
+        "basin_radius": 8
+      },
+      {
+        "name": "tender",
+        "position": [
+          5.6,
+          -11.2
+        ],
+        "gravity": 0.507,
+        "basin_radius": 10
+      }
+    ],
+    "universal_axes": {
+      "valence": {
+        "direction": [
+          1,
+          -1
+        ],
+        "description": "High valence = green-blue, Low = red-yellow"
+      },
+      "energy": {
+        "direction": [
+          1,
+          1
+        ],
+        "description": "High energy = large yellow, Low = small blue"
+      },
+      "tension": {
+        "direction": [
+          -1,
+          0
+        ],
+        "description": "High tension = dark, Low = light"
+      }
+    }
+  },
+  "graph_benchmark_protocol": {
+    "description": "How to test MRNN against standard graph classification datasets",
+    "datasets_by_complexity": {
+      "tiny": [
+        "MUTAG",
+        "PTC_MM",
+        "Letter-low"
+      ],
+      "small": [
+        "PROTEINS",
+        "ENZYMES",
+        "NCI1"
+      ],
+      "medium": [
+        "IMDB-BINARY",
+        "REDDIT-BINARY"
+      ],
+      "large": [
+        "REDDIT-MULTI-5K",
+        "REDDIT-MULTI-12K"
+      ],
+      "massive": [
+        "DD",
+        "FIRSTMM_DB"
+      ]
+    },
+    "mrnn_advantages": {
+      "message_passing": "Your 9-cluster 13-layer architecture should capture multi-scale graph structure",
+      "emotional_binding": "Can incorporate node/edge emotion labels as additional features",
+      "crossmodal": "Can fuse audio features (spectral) with graph topology",
+      "scalability": "Test on REDDIT-MULTI-12K (11,917 graphs, ~392 nodes each)"
+    },
+    "baseline_comparison": {
+      "GIN": "Graph Isomorphism Network - current SOTA on many benchmarks",
+      "GCN": "Graph Convolutional Network",
+      "GraphSAGE": "Inductive representation learning",
+      "GAT": "Graph Attention Network",
+      "target": "MRNN should match or exceed GIN on molecular/protein datasets"
+    }
+  },
+  "implementation_notes": {
+    "for_synthia_os": {
+      "color_engine": "Use LindborgColorEmotionLayer.ts for real-time music\u2192color mapping",
+      "chromesthesia_mode": "Toggle between projector (external) and associator (internal) visualization",
+      "graph_ingestion": "Ingest graph datasets as cognitive objects with node/edge features",
+      "emotion_overlay": "When visualizing graphs, overlay emotion-color mapping on nodes",
+      "attention_visualization": "Show attention weights as edge thickness/color intensity"
+    },
+    "for_mrnn_mesh": {
+      "node_features": "Combine CIE Lab coordinates + size + emotion label",
+      "edge_features": "Correlation weights from audio feature analysis",
+      "message_passing": "Pass color-emotion embeddings through 13 layers",
+      "cluster_assignment": "Assign nodes to 9 clusters based on emotional archetype proximity",
+      "output": "Graph-level classification or node-level color prediction"
+    }
+  }
+}

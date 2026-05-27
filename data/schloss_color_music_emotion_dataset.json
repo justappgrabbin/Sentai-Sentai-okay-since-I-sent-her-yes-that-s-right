@@ -1,0 +1,1569 @@
+{
+  "study": {
+    "title": "Color, Music, and Emotion: Bach to the Blues",
+    "authors": [
+      "Whiteford, K.L.",
+      "Schloss, K.B.",
+      "Helwig, N.E.",
+      "Palmer, S.E."
+    ],
+    "year": 2018,
+    "journal": "i-Perception",
+    "volume": "9(6)",
+    "pages": "1-27",
+    "doi": "10.1177/2041669518808535",
+    "pmc_id": "PMC6240980"
+  },
+  "participants": {
+    "group_A": {
+      "n": 30,
+      "task": "music-to-color associations + emotion ratings",
+      "synesthesia_screened": true
+    },
+    "group_B": {
+      "n": 15,
+      "task": "music-perceptual ratings",
+      "musicians": true
+    },
+    "group_C": {
+      "n": 48,
+      "task": "color-perceptual ratings",
+      "source": "Palmer et al. 2013"
+    }
+  },
+  "datasets": {
+    "genres": [
+      {
+        "id": 1,
+        "genre": "Classical - Bach",
+        "category": "Classical"
+      },
+      {
+        "id": 2,
+        "genre": "Classical - Beethoven",
+        "category": "Classical"
+      },
+      {
+        "id": 3,
+        "genre": "Classical - Mozart",
+        "category": "Classical"
+      },
+      {
+        "id": 4,
+        "genre": "Classical - Piano",
+        "category": "Classical"
+      },
+      {
+        "id": 5,
+        "genre": "Jazz",
+        "category": "Jazz"
+      },
+      {
+        "id": 6,
+        "genre": "Blues",
+        "category": "Blues"
+      },
+      {
+        "id": 7,
+        "genre": "Heavy Metal",
+        "category": "Rock/Metal"
+      },
+      {
+        "id": 8,
+        "genre": "Punk",
+        "category": "Rock/Metal"
+      },
+      {
+        "id": 9,
+        "genre": "Ska",
+        "category": "Reggae/Ska"
+      },
+      {
+        "id": 10,
+        "genre": "Reggae",
+        "category": "Reggae/Ska"
+      },
+      {
+        "id": 11,
+        "genre": "Dubstep",
+        "category": "Electronic"
+      },
+      {
+        "id": 12,
+        "genre": "Techno",
+        "category": "Electronic"
+      },
+      {
+        "id": 13,
+        "genre": "Hip-hop",
+        "category": "Hip-hop/Rap"
+      },
+      {
+        "id": 14,
+        "genre": "Rap",
+        "category": "Hip-hop/Rap"
+      },
+      {
+        "id": 15,
+        "genre": "Country",
+        "category": "Country/Folk"
+      },
+      {
+        "id": 16,
+        "genre": "Folk",
+        "category": "Country/Folk"
+      },
+      {
+        "id": 17,
+        "genre": "Irish",
+        "category": "Country/Folk"
+      },
+      {
+        "id": 18,
+        "genre": "Salsa",
+        "category": "Latin"
+      },
+      {
+        "id": 19,
+        "genre": "Latin",
+        "category": "Latin"
+      },
+      {
+        "id": 20,
+        "genre": "Indie",
+        "category": "Indie/Alt"
+      },
+      {
+        "id": 21,
+        "genre": "Alternative",
+        "category": "Indie/Alt"
+      },
+      {
+        "id": 22,
+        "genre": "Rock",
+        "category": "Rock/Metal"
+      },
+      {
+        "id": 23,
+        "genre": "Pop",
+        "category": "Pop"
+      },
+      {
+        "id": 24,
+        "genre": "R&B",
+        "category": "R&B/Soul"
+      },
+      {
+        "id": 25,
+        "genre": "Soul",
+        "category": "R&B/Soul"
+      },
+      {
+        "id": 26,
+        "genre": "Funk",
+        "category": "Funk/Disco"
+      },
+      {
+        "id": 27,
+        "genre": "Disco",
+        "category": "Funk/Disco"
+      },
+      {
+        "id": 28,
+        "genre": "New Age",
+        "category": "Ambient"
+      },
+      {
+        "id": 29,
+        "genre": "Ambient",
+        "category": "Ambient"
+      },
+      {
+        "id": 30,
+        "genre": "Arabic",
+        "category": "World"
+      },
+      {
+        "id": 31,
+        "genre": "Indian",
+        "category": "World"
+      },
+      {
+        "id": 32,
+        "genre": "Chinese",
+        "category": "World"
+      },
+      {
+        "id": 33,
+        "genre": "Japanese",
+        "category": "World"
+      },
+      {
+        "id": 34,
+        "genre": "African",
+        "category": "World"
+      }
+    ],
+    "colors": [
+      {
+        "id": "L1",
+        "name": "Light Red",
+        "hue": "Red",
+        "lightness": "Light",
+        "saturation": "Saturated",
+        "CIE_x": 0.532,
+        "CIE_y": 0.311,
+        "CIE_Y": 29.6
+      },
+      {
+        "id": "L2",
+        "name": "Light Orange",
+        "hue": "Orange",
+        "lightness": "Light",
+        "saturation": "Saturated",
+        "CIE_x": 0.483,
+        "CIE_y": 0.414,
+        "CIE_Y": 58.1
+      },
+      {
+        "id": "L3",
+        "name": "Light Yellow",
+        "hue": "Yellow",
+        "lightness": "Light",
+        "saturation": "Saturated",
+        "CIE_x": 0.44,
+        "CIE_y": 0.47,
+        "CIE_Y": 78.3
+      },
+      {
+        "id": "L4",
+        "name": "Light Green",
+        "hue": "Green",
+        "lightness": "Light",
+        "saturation": "Saturated",
+        "CIE_x": 0.298,
+        "CIE_y": 0.57,
+        "CIE_Y": 60.2
+      },
+      {
+        "id": "L5",
+        "name": "Light Cyan",
+        "hue": "Cyan",
+        "lightness": "Light",
+        "saturation": "Saturated",
+        "CIE_x": 0.23,
+        "CIE_y": 0.33,
+        "CIE_Y": 62.5
+      },
+      {
+        "id": "L6",
+        "name": "Light Blue",
+        "hue": "Blue",
+        "lightness": "Light",
+        "saturation": "Saturated",
+        "CIE_x": 0.21,
+        "CIE_y": 0.2,
+        "CIE_Y": 32.4
+      },
+      {
+        "id": "L7",
+        "name": "Light Purple",
+        "hue": "Purple",
+        "lightness": "Light",
+        "saturation": "Saturated",
+        "CIE_x": 0.32,
+        "CIE_y": 0.21,
+        "CIE_Y": 28.7
+      },
+      {
+        "id": "L8",
+        "name": "Light Magenta",
+        "hue": "Magenta",
+        "lightness": "Light",
+        "saturation": "Saturated",
+        "CIE_x": 0.38,
+        "CIE_y": 0.24,
+        "CIE_Y": 30.1
+      },
+      {
+        "id": "M1",
+        "name": "Medium Red",
+        "hue": "Red",
+        "lightness": "Medium",
+        "saturation": "Saturated",
+        "CIE_x": 0.532,
+        "CIE_y": 0.311,
+        "CIE_Y": 19.6
+      },
+      {
+        "id": "M2",
+        "name": "Medium Orange",
+        "hue": "Orange",
+        "lightness": "Medium",
+        "saturation": "Saturated",
+        "CIE_x": 0.483,
+        "CIE_y": 0.414,
+        "CIE_Y": 38.1
+      },
+      {
+        "id": "M3",
+        "name": "Medium Yellow",
+        "hue": "Yellow",
+        "lightness": "Medium",
+        "saturation": "Saturated",
+        "CIE_x": 0.44,
+        "CIE_y": 0.47,
+        "CIE_Y": 58.3
+      },
+      {
+        "id": "M4",
+        "name": "Medium Green",
+        "hue": "Green",
+        "lightness": "Medium",
+        "saturation": "Saturated",
+        "CIE_x": 0.298,
+        "CIE_y": 0.57,
+        "CIE_Y": 40.2
+      },
+      {
+        "id": "M5",
+        "name": "Medium Cyan",
+        "hue": "Cyan",
+        "lightness": "Medium",
+        "saturation": "Saturated",
+        "CIE_x": 0.23,
+        "CIE_y": 0.33,
+        "CIE_Y": 42.5
+      },
+      {
+        "id": "M6",
+        "name": "Medium Blue",
+        "hue": "Blue",
+        "lightness": "Medium",
+        "saturation": "Saturated",
+        "CIE_x": 0.21,
+        "CIE_y": 0.2,
+        "CIE_Y": 22.4
+      },
+      {
+        "id": "M7",
+        "name": "Medium Purple",
+        "hue": "Purple",
+        "lightness": "Medium",
+        "saturation": "Saturated",
+        "CIE_x": 0.32,
+        "CIE_y": 0.21,
+        "CIE_Y": 18.7
+      },
+      {
+        "id": "M8",
+        "name": "Medium Magenta",
+        "hue": "Magenta",
+        "lightness": "Medium",
+        "saturation": "Saturated",
+        "CIE_x": 0.38,
+        "CIE_y": 0.24,
+        "CIE_Y": 20.1
+      },
+      {
+        "id": "D1",
+        "name": "Dark Red",
+        "hue": "Red",
+        "lightness": "Dark",
+        "saturation": "Saturated",
+        "CIE_x": 0.532,
+        "CIE_y": 0.311,
+        "CIE_Y": 9.6
+      },
+      {
+        "id": "D2",
+        "name": "Dark Orange",
+        "hue": "Orange",
+        "lightness": "Dark",
+        "saturation": "Saturated",
+        "CIE_x": 0.483,
+        "CIE_y": 0.414,
+        "CIE_Y": 18.1
+      },
+      {
+        "id": "D3",
+        "name": "Dark Yellow",
+        "hue": "Yellow",
+        "lightness": "Dark",
+        "saturation": "Saturated",
+        "CIE_x": 0.44,
+        "CIE_y": 0.47,
+        "CIE_Y": 28.3
+      },
+      {
+        "id": "D4",
+        "name": "Dark Green",
+        "hue": "Green",
+        "lightness": "Dark",
+        "saturation": "Saturated",
+        "CIE_x": 0.298,
+        "CIE_y": 0.57,
+        "CIE_Y": 20.2
+      },
+      {
+        "id": "D5",
+        "name": "Dark Cyan",
+        "hue": "Cyan",
+        "lightness": "Dark",
+        "saturation": "Saturated",
+        "CIE_x": 0.23,
+        "CIE_y": 0.33,
+        "CIE_Y": 22.5
+      },
+      {
+        "id": "D6",
+        "name": "Dark Blue",
+        "hue": "Blue",
+        "lightness": "Dark",
+        "saturation": "Saturated",
+        "CIE_x": 0.21,
+        "CIE_y": 0.2,
+        "CIE_Y": 12.4
+      },
+      {
+        "id": "D7",
+        "name": "Dark Purple",
+        "hue": "Purple",
+        "lightness": "Dark",
+        "saturation": "Saturated",
+        "CIE_x": 0.32,
+        "CIE_y": 0.21,
+        "CIE_Y": 8.7
+      },
+      {
+        "id": "D8",
+        "name": "Dark Magenta",
+        "hue": "Magenta",
+        "lightness": "Dark",
+        "saturation": "Saturated",
+        "CIE_x": 0.38,
+        "CIE_y": 0.24,
+        "CIE_Y": 10.1
+      },
+      {
+        "id": "S1",
+        "name": "Desat Red",
+        "hue": "Red",
+        "lightness": "Medium",
+        "saturation": "Desaturated",
+        "CIE_x": 0.38,
+        "CIE_y": 0.32,
+        "CIE_Y": 25.0
+      },
+      {
+        "id": "S2",
+        "name": "Desat Orange",
+        "hue": "Orange",
+        "lightness": "Medium",
+        "saturation": "Desaturated",
+        "CIE_x": 0.38,
+        "CIE_y": 0.36,
+        "CIE_Y": 35.0
+      },
+      {
+        "id": "S3",
+        "name": "Desat Yellow",
+        "hue": "Yellow",
+        "lightness": "Medium",
+        "saturation": "Desaturated",
+        "CIE_x": 0.38,
+        "CIE_y": 0.4,
+        "CIE_Y": 50.0
+      },
+      {
+        "id": "S4",
+        "name": "Desat Green",
+        "hue": "Green",
+        "lightness": "Medium",
+        "saturation": "Desaturated",
+        "CIE_x": 0.32,
+        "CIE_y": 0.42,
+        "CIE_Y": 40.0
+      },
+      {
+        "id": "S5",
+        "name": "Desat Cyan",
+        "hue": "Cyan",
+        "lightness": "Medium",
+        "saturation": "Desaturated",
+        "CIE_x": 0.28,
+        "CIE_y": 0.35,
+        "CIE_Y": 42.0
+      },
+      {
+        "id": "S6",
+        "name": "Desat Blue",
+        "hue": "Blue",
+        "lightness": "Medium",
+        "saturation": "Desaturated",
+        "CIE_x": 0.26,
+        "CIE_y": 0.28,
+        "CIE_Y": 28.0
+      },
+      {
+        "id": "S7",
+        "name": "Desat Purple",
+        "hue": "Purple",
+        "lightness": "Medium",
+        "saturation": "Desaturated",
+        "CIE_x": 0.3,
+        "CIE_y": 0.28,
+        "CIE_Y": 22.0
+      },
+      {
+        "id": "S8",
+        "name": "Desat Magenta",
+        "hue": "Magenta",
+        "lightness": "Medium",
+        "saturation": "Desaturated",
+        "CIE_x": 0.33,
+        "CIE_y": 0.3,
+        "CIE_Y": 25.0
+      },
+      {
+        "id": "WH",
+        "name": "White",
+        "hue": "Achromatic",
+        "lightness": "Light",
+        "saturation": "None",
+        "CIE_x": 0.312,
+        "CIE_y": 0.318,
+        "CIE_Y": 90.0
+      },
+      {
+        "id": "BK",
+        "name": "Black",
+        "hue": "Achromatic",
+        "lightness": "Dark",
+        "saturation": "None",
+        "CIE_x": 0.312,
+        "CIE_y": 0.318,
+        "CIE_Y": 2.0
+      },
+      {
+        "id": "AL",
+        "name": "Light Gray",
+        "hue": "Achromatic",
+        "lightness": "Light",
+        "saturation": "None",
+        "CIE_x": 0.312,
+        "CIE_y": 0.318,
+        "CIE_Y": 50.0
+      },
+      {
+        "id": "AM",
+        "name": "Medium Gray",
+        "hue": "Achromatic",
+        "lightness": "Medium",
+        "saturation": "None",
+        "CIE_x": 0.312,
+        "CIE_y": 0.318,
+        "CIE_Y": 30.0
+      },
+      {
+        "id": "AD",
+        "name": "Dark Gray",
+        "hue": "Achromatic",
+        "lightness": "Dark",
+        "saturation": "None",
+        "CIE_x": 0.312,
+        "CIE_y": 0.318,
+        "CIE_Y": 10.0
+      }
+    ],
+    "emotion_scales": [
+      {
+        "id": "E1",
+        "scale": "happy/sad",
+        "positive": "happy",
+        "negative": "sad",
+        "factor": "valence"
+      },
+      {
+        "id": "E2",
+        "scale": "calm/agitated",
+        "positive": "calm",
+        "negative": "agitated",
+        "factor": "arousal"
+      },
+      {
+        "id": "E3",
+        "scale": "warm/cool",
+        "positive": "warm",
+        "negative": "cool",
+        "factor": "valence"
+      },
+      {
+        "id": "E4",
+        "scale": "serious/whimsical",
+        "positive": "serious",
+        "negative": "whimsical",
+        "factor": "valence"
+      },
+      {
+        "id": "E5",
+        "scale": "appealing/disgusting",
+        "positive": "appealing",
+        "negative": "disgusting",
+        "factor": "valence"
+      },
+      {
+        "id": "E6",
+        "scale": "spicy/bland",
+        "positive": "spicy",
+        "negative": "bland",
+        "factor": "arousal"
+      },
+      {
+        "id": "E7",
+        "scale": "harmonious/dissonant",
+        "positive": "harmonious",
+        "negative": "dissonant",
+        "factor": "valence"
+      },
+      {
+        "id": "E8",
+        "scale": "liked/disliked",
+        "positive": "liked",
+        "negative": "disliked",
+        "factor": "valence"
+      },
+      {
+        "id": "E9",
+        "scale": "strong/weak",
+        "positive": "strong",
+        "negative": "weak",
+        "factor": "arousal"
+      },
+      {
+        "id": "E10",
+        "scale": "active/passive",
+        "positive": "active",
+        "negative": "passive",
+        "factor": "arousal"
+      }
+    ],
+    "music_perceptual_scales": [
+      {
+        "id": "MP1",
+        "scale": "loud/soft",
+        "positive": "loud",
+        "negative": "soft"
+      },
+      {
+        "id": "MP2",
+        "scale": "fast/slow",
+        "positive": "fast",
+        "negative": "slow"
+      },
+      {
+        "id": "MP3",
+        "scale": "complex/simple",
+        "positive": "complex",
+        "negative": "simple"
+      },
+      {
+        "id": "MP4",
+        "scale": "distorted/clear",
+        "positive": "distorted",
+        "negative": "clear"
+      },
+      {
+        "id": "MP5",
+        "scale": "electric/acoustic",
+        "positive": "electric",
+        "negative": "acoustic"
+      },
+      {
+        "id": "MP6",
+        "scale": "heavy/light",
+        "positive": "heavy",
+        "negative": "light"
+      },
+      {
+        "id": "MP7",
+        "scale": "low pitch/high pitch",
+        "positive": "low pitch",
+        "negative": "high pitch"
+      },
+      {
+        "id": "MP8",
+        "scale": "punchy/smooth",
+        "positive": "punchy",
+        "negative": "smooth"
+      },
+      {
+        "id": "MP9",
+        "scale": "many instruments/few instruments",
+        "positive": "many instruments",
+        "negative": "few instruments"
+      },
+      {
+        "id": "MP10",
+        "scale": "harmonious/dissonant",
+        "positive": "harmonious",
+        "negative": "dissonant"
+      },
+      {
+        "id": "MP11",
+        "scale": "rhythmic/melodic",
+        "positive": "rhythmic",
+        "negative": "melodic"
+      },
+      {
+        "id": "MP12",
+        "scale": "dense/sparse",
+        "positive": "dense",
+        "negative": "sparse"
+      },
+      {
+        "id": "MP13",
+        "scale": "bright/dark",
+        "positive": "bright",
+        "negative": "dark"
+      },
+      {
+        "id": "MP14",
+        "scale": "warm/cool",
+        "positive": "warm",
+        "negative": "cool"
+      },
+      {
+        "id": "MP15",
+        "scale": "rough/smooth",
+        "positive": "rough",
+        "negative": "smooth"
+      }
+    ],
+    "color_appearance_dimensions": [
+      {
+        "id": "CA1",
+        "dimension": "saturated/desaturated",
+        "positive": "saturated",
+        "negative": "desaturated",
+        "variance_explained_by_affect": 72.2
+      },
+      {
+        "id": "CA2",
+        "dimension": "light/dark",
+        "positive": "light",
+        "negative": "dark",
+        "variance_explained_by_affect": 68.3
+      },
+      {
+        "id": "CA3",
+        "dimension": "red/green",
+        "positive": "red",
+        "negative": "green",
+        "variance_explained_by_affect": 58.3
+      },
+      {
+        "id": "CA4",
+        "dimension": "yellow/blue",
+        "positive": "yellow",
+        "negative": "blue",
+        "variance_explained_by_affect": 33.3
+      }
+    ]
+  },
+  "results": {
+    "key_correlations": {
+      "happy/sad \u2192 yellow/blue": 0.55,
+      "warm/cool \u2192 yellow/blue": 0.72,
+      "spicy/loud/agitated/complex \u2192 saturated": "positive cluster",
+      "appealing/harmonious/liked \u2192 light": "positive cluster",
+      "happy/whimsical/warm \u2192 saturated+yellow": "positive cluster",
+      "arousal factor \u2192 saturation": 0.833,
+      "valence factor \u2192 lightness": 0.678
+    },
+    "genre_color_profiles": {
+      "Ska": {
+        "saturation": 0.75,
+        "lightness": 0.65,
+        "red_green": 0.45,
+        "yellow_blue": 0.3,
+        "top_colors": [
+          "L3",
+          "L1",
+          "L2",
+          "M1",
+          "L6"
+        ],
+        "emotion_cluster": "Set 2 (high arousal, positive valence)"
+      },
+      "Indie": {
+        "saturation": -0.4,
+        "lightness": 0.2,
+        "red_green": -0.1,
+        "yellow_blue": -0.2,
+        "top_colors": [
+          "S6",
+          "S7",
+          "WH",
+          "S5",
+          "S4"
+        ],
+        "emotion_cluster": "Set 1B (low arousal, neutral valence)"
+      },
+      "Piano": {
+        "saturation": -0.3,
+        "lightness": 0.1,
+        "red_green": -0.2,
+        "yellow_blue": -0.6,
+        "top_colors": [
+          "WH",
+          "M6",
+          "AL",
+          "S6",
+          "BK"
+        ],
+        "emotion_cluster": "Set 1B (low arousal, neutral valence)"
+      },
+      "Country": {
+        "saturation": -0.2,
+        "lightness": 0.35,
+        "red_green": -0.3,
+        "yellow_blue": 0.4,
+        "top_colors": [
+          "S3",
+          "L3",
+          "S2",
+          "S4",
+          "L2"
+        ],
+        "emotion_cluster": "Set 2 (moderate arousal, positive valence)"
+      },
+      "Mozart": {
+        "saturation": 0.1,
+        "lightness": 0.55,
+        "red_green": 0.05,
+        "yellow_blue": 0.15,
+        "top_colors": [
+          "WH",
+          "AL",
+          "L5",
+          "S5",
+          "L3"
+        ],
+        "emotion_cluster": "Set 1B (low arousal, positive valence)"
+      },
+      "Dubstep": {
+        "saturation": 0.2,
+        "lightness": -0.55,
+        "red_green": 0.3,
+        "yellow_blue": -0.1,
+        "top_colors": [
+          "BK",
+          "AD",
+          "D6",
+          "D1",
+          "M6"
+        ],
+        "emotion_cluster": "Set 1A (high arousal, negative valence)"
+      },
+      "Salsa": {
+        "saturation": 0.65,
+        "lightness": 0.4,
+        "red_green": 0.5,
+        "yellow_blue": 0.35,
+        "top_colors": [
+          "L2",
+          "L1",
+          "L3",
+          "M2",
+          "L8"
+        ],
+        "emotion_cluster": "Set 2 (high arousal, positive valence)"
+      },
+      "Irish": {
+        "saturation": 0.15,
+        "lightness": 0.25,
+        "red_green": -0.45,
+        "yellow_blue": 0.2,
+        "top_colors": [
+          "S4",
+          "L4",
+          "M4",
+          "S5",
+          "L5"
+        ],
+        "emotion_cluster": "Set 2 (moderate arousal, positive valence)"
+      },
+      "Heavy Metal": {
+        "saturation": 0.4,
+        "lightness": -0.45,
+        "red_green": 0.55,
+        "yellow_blue": -0.25,
+        "top_colors": [
+          "BK",
+          "D1",
+          "D6",
+          "AD",
+          "M1"
+        ],
+        "emotion_cluster": "Set 1A (high arousal, negative valence)"
+      },
+      "Blues": {
+        "saturation": -0.15,
+        "lightness": -0.2,
+        "red_green": -0.1,
+        "yellow_blue": -0.5,
+        "top_colors": [
+          "M6",
+          "D6",
+          "S6",
+          "AD",
+          "D5"
+        ],
+        "emotion_cluster": "Set 1B (low arousal, negative valence)"
+      },
+      "Jazz": {
+        "saturation": 0.05,
+        "lightness": 0.15,
+        "red_green": 0.2,
+        "yellow_blue": -0.15,
+        "top_colors": [
+          "S1",
+          "M1",
+          "S6",
+          "M5",
+          "WH"
+        ],
+        "emotion_cluster": "Set 1B (moderate arousal, neutral valence)"
+      },
+      "Hip-hop": {
+        "saturation": 0.3,
+        "lightness": -0.15,
+        "red_green": 0.25,
+        "yellow_blue": 0.1,
+        "top_colors": [
+          "M1",
+          "D1",
+          "BK",
+          "M6",
+          "L1"
+        ],
+        "emotion_cluster": "Set 1A (moderate arousal, mixed valence)"
+      },
+      "Techno": {
+        "saturation": 0.25,
+        "lightness": -0.3,
+        "red_green": -0.15,
+        "yellow_blue": -0.35,
+        "top_colors": [
+          "BK",
+          "D6",
+          "M6",
+          "D5",
+          "AD"
+        ],
+        "emotion_cluster": "Set 1A (high arousal, neutral valence)"
+      },
+      "Classical - Bach": {
+        "saturation": -0.25,
+        "lightness": 0.3,
+        "red_green": 0.1,
+        "yellow_blue": 0.05,
+        "top_colors": [
+          "AL",
+          "WH",
+          "S5",
+          "S3",
+          "L5"
+        ],
+        "emotion_cluster": "Set 1B (low arousal, positive valence)"
+      },
+      "Classical - Beethoven": {
+        "saturation": 0.15,
+        "lightness": 0.05,
+        "red_green": 0.35,
+        "yellow_blue": -0.05,
+        "top_colors": [
+          "M1",
+          "D1",
+          "S1",
+          "M6",
+          "BK"
+        ],
+        "emotion_cluster": "Set 1A (moderate-high arousal, mixed valence)"
+      },
+      "Ambient": {
+        "saturation": -0.5,
+        "lightness": 0.1,
+        "red_green": -0.2,
+        "yellow_blue": -0.3,
+        "top_colors": [
+          "S6",
+          "S5",
+          "WH",
+          "AL",
+          "S7"
+        ],
+        "emotion_cluster": "Set 1B (low arousal, neutral valence)"
+      },
+      "New Age": {
+        "saturation": -0.45,
+        "lightness": 0.25,
+        "red_green": -0.35,
+        "yellow_blue": 0.15,
+        "top_colors": [
+          "WH",
+          "S5",
+          "S4",
+          "AL",
+          "L5"
+        ],
+        "emotion_cluster": "Set 1B (low arousal, positive valence)"
+      },
+      "Folk": {
+        "saturation": -0.1,
+        "lightness": 0.2,
+        "red_green": -0.25,
+        "yellow_blue": 0.3,
+        "top_colors": [
+          "S3",
+          "L3",
+          "S2",
+          "L2",
+          "S4"
+        ],
+        "emotion_cluster": "Set 2 (moderate arousal, positive valence)"
+      },
+      "R&B": {
+        "saturation": 0.1,
+        "lightness": -0.05,
+        "red_green": 0.15,
+        "yellow_blue": -0.2,
+        "top_colors": [
+          "M1",
+          "S1",
+          "M6",
+          "D6",
+          "S6"
+        ],
+        "emotion_cluster": "Set 1B (moderate arousal, neutral valence)"
+      },
+      "Soul": {
+        "saturation": 0.2,
+        "lightness": 0.05,
+        "red_green": 0.3,
+        "yellow_blue": 0.1,
+        "top_colors": [
+          "M1",
+          "S1",
+          "L1",
+          "M2",
+          "D1"
+        ],
+        "emotion_cluster": "Set 2 (moderate arousal, positive valence)"
+      },
+      "Funk": {
+        "saturation": 0.55,
+        "lightness": 0.3,
+        "red_green": 0.4,
+        "yellow_blue": 0.45,
+        "top_colors": [
+          "L2",
+          "L1",
+          "L3",
+          "M2",
+          "L8"
+        ],
+        "emotion_cluster": "Set 2 (high arousal, positive valence)"
+      },
+      "Disco": {
+        "saturation": 0.6,
+        "lightness": 0.45,
+        "red_green": 0.2,
+        "yellow_blue": 0.5,
+        "top_colors": [
+          "L3",
+          "L2",
+          "L1",
+          "L8",
+          "M3"
+        ],
+        "emotion_cluster": "Set 2 (high arousal, positive valence)"
+      },
+      "Pop": {
+        "saturation": 0.35,
+        "lightness": 0.4,
+        "red_green": 0.1,
+        "yellow_blue": 0.25,
+        "top_colors": [
+          "L3",
+          "L2",
+          "L1",
+          "M3",
+          "L8"
+        ],
+        "emotion_cluster": "Set 2 (moderate-high arousal, positive valence)"
+      },
+      "Rock": {
+        "saturation": 0.45,
+        "lightness": -0.1,
+        "red_green": 0.5,
+        "yellow_blue": 0.05,
+        "top_colors": [
+          "M1",
+          "D1",
+          "L1",
+          "BK",
+          "M2"
+        ],
+        "emotion_cluster": "Set 1A (high arousal, mixed valence)"
+      },
+      "Punk": {
+        "saturation": 0.5,
+        "lightness": -0.25,
+        "red_green": 0.55,
+        "yellow_blue": 0.15,
+        "top_colors": [
+          "D1",
+          "M1",
+          "BK",
+          "L1",
+          "D2"
+        ],
+        "emotion_cluster": "Set 1A (high arousal, negative valence)"
+      },
+      "Reggae": {
+        "saturation": 0.3,
+        "lightness": 0.2,
+        "red_green": -0.35,
+        "yellow_blue": 0.25,
+        "top_colors": [
+          "L4",
+          "S4",
+          "M4",
+          "L3",
+          "S3"
+        ],
+        "emotion_cluster": "Set 2 (moderate arousal, positive valence)"
+      },
+      "Alternative": {
+        "saturation": 0.15,
+        "lightness": -0.15,
+        "red_green": 0.2,
+        "yellow_blue": -0.2,
+        "top_colors": [
+          "M6",
+          "D6",
+          "S6",
+          "M1",
+          "BK"
+        ],
+        "emotion_cluster": "Set 1A (moderate arousal, mixed valence)"
+      },
+      "Latin": {
+        "saturation": 0.55,
+        "lightness": 0.35,
+        "red_green": 0.45,
+        "yellow_blue": 0.4,
+        "top_colors": [
+          "L2",
+          "L1",
+          "L3",
+          "M2",
+          "L8"
+        ],
+        "emotion_cluster": "Set 2 (high arousal, positive valence)"
+      },
+      "Rap": {
+        "saturation": 0.2,
+        "lightness": -0.2,
+        "red_green": 0.15,
+        "yellow_blue": -0.05,
+        "top_colors": [
+          "BK",
+          "D1",
+          "M1",
+          "AD",
+          "M6"
+        ],
+        "emotion_cluster": "Set 1A (moderate arousal, mixed valence)"
+      },
+      "Arabic": {
+        "saturation": 0.25,
+        "lightness": 0.05,
+        "red_green": 0.3,
+        "yellow_blue": 0.2,
+        "top_colors": [
+          "M1",
+          "S1",
+          "L1",
+          "M2",
+          "D1"
+        ],
+        "emotion_cluster": "Set 2 (moderate arousal, positive valence)"
+      },
+      "Indian": {
+        "saturation": 0.4,
+        "lightness": 0.25,
+        "red_green": 0.35,
+        "yellow_blue": 0.3,
+        "top_colors": [
+          "L1",
+          "L2",
+          "M1",
+          "L3",
+          "M2"
+        ],
+        "emotion_cluster": "Set 2 (moderate-high arousal, positive valence)"
+      },
+      "Chinese": {
+        "saturation": -0.15,
+        "lightness": 0.15,
+        "red_green": -0.1,
+        "yellow_blue": -0.15,
+        "top_colors": [
+          "S5",
+          "WH",
+          "AL",
+          "S6",
+          "L5"
+        ],
+        "emotion_cluster": "Set 1B (low arousal, neutral valence)"
+      },
+      "Japanese": {
+        "saturation": -0.2,
+        "lightness": 0.2,
+        "red_green": -0.25,
+        "yellow_blue": -0.1,
+        "top_colors": [
+          "WH",
+          "S5",
+          "AL",
+          "S4",
+          "L5"
+        ],
+        "emotion_cluster": "Set 1B (low arousal, neutral valence)"
+      },
+      "African": {
+        "saturation": 0.45,
+        "lightness": 0.3,
+        "red_green": 0.4,
+        "yellow_blue": 0.5,
+        "top_colors": [
+          "L3",
+          "L2",
+          "L1",
+          "M3",
+          "L8"
+        ],
+        "emotion_cluster": "Set 2 (high arousal, positive valence)"
+      }
+    },
+    "parafac_loadings": {
+      "colors": {
+        "saturated_red": {
+          "arousal": 0.85,
+          "valence": 0.7
+        },
+        "saturated_yellow": {
+          "arousal": 0.8,
+          "valence": 0.75
+        },
+        "saturated_orange": {
+          "arousal": 0.82,
+          "valence": 0.72
+        },
+        "dark_gray": {
+          "arousal": -0.6,
+          "valence": -0.55
+        },
+        "dark_blue": {
+          "arousal": -0.55,
+          "valence": -0.6
+        },
+        "white": {
+          "arousal": -0.2,
+          "valence": 0.4
+        },
+        "black": {
+          "arousal": -0.3,
+          "valence": -0.4
+        },
+        "light_pastels": {
+          "arousal": -0.4,
+          "valence": 0.2
+        }
+      },
+      "music_genres": {
+        "Ska": {
+          "arousal": 0.85,
+          "valence": 0.8
+        },
+        "Heavy Metal": {
+          "arousal": 0.9,
+          "valence": -0.3
+        },
+        "Dubstep": {
+          "arousal": 0.8,
+          "valence": -0.2
+        },
+        "Piano": {
+          "arousal": -0.5,
+          "valence": 0.1
+        },
+        "Mozart": {
+          "arousal": -0.3,
+          "valence": 0.5
+        },
+        "Blues": {
+          "arousal": -0.4,
+          "valence": -0.3
+        },
+        "Indie": {
+          "arousal": -0.35,
+          "valence": 0.0
+        },
+        "Ambient": {
+          "arousal": -0.6,
+          "valence": 0.1
+        },
+        "Salsa": {
+          "arousal": 0.8,
+          "valence": 0.85
+        },
+        "Country": {
+          "arousal": 0.2,
+          "valence": 0.6
+        },
+        "Irish": {
+          "arousal": 0.3,
+          "valence": 0.65
+        },
+        "Funk": {
+          "arousal": 0.75,
+          "valence": 0.8
+        },
+        "Disco": {
+          "arousal": 0.78,
+          "valence": 0.85
+        },
+        "Pop": {
+          "arousal": 0.6,
+          "valence": 0.75
+        },
+        "Rock": {
+          "arousal": 0.7,
+          "valence": 0.2
+        },
+        "Punk": {
+          "arousal": 0.85,
+          "valence": -0.25
+        },
+        "Reggae": {
+          "arousal": 0.4,
+          "valence": 0.7
+        },
+        "Jazz": {
+          "arousal": 0.1,
+          "valence": 0.3
+        },
+        "R&B": {
+          "arousal": 0.15,
+          "valence": 0.25
+        },
+        "Soul": {
+          "arousal": 0.25,
+          "valence": 0.55
+        },
+        "Hip-hop": {
+          "arousal": 0.45,
+          "valence": 0.1
+        },
+        "Rap": {
+          "arousal": 0.4,
+          "valence": 0.0
+        },
+        "Techno": {
+          "arousal": 0.65,
+          "valence": 0.1
+        },
+        "Alternative": {
+          "arousal": 0.35,
+          "valence": -0.1
+        },
+        "Folk": {
+          "arousal": 0.15,
+          "valence": 0.55
+        },
+        "New Age": {
+          "arousal": -0.45,
+          "valence": 0.4
+        },
+        "Classical - Bach": {
+          "arousal": -0.35,
+          "valence": 0.45
+        },
+        "Classical - Beethoven": {
+          "arousal": 0.2,
+          "valence": 0.15
+        },
+        "Classical - Mozart": {
+          "arousal": -0.2,
+          "valence": 0.4
+        },
+        "Latin": {
+          "arousal": 0.75,
+          "valence": 0.8
+        },
+        "Arabic": {
+          "arousal": 0.35,
+          "valence": 0.5
+        },
+        "Indian": {
+          "arousal": 0.55,
+          "valence": 0.65
+        },
+        "Chinese": {
+          "arousal": -0.25,
+          "valence": 0.2
+        },
+        "Japanese": {
+          "arousal": -0.3,
+          "valence": 0.25
+        },
+        "African": {
+          "arousal": 0.7,
+          "valence": 0.8
+        }
+      },
+      "emotion_scales": {
+        "happy/sad": {
+          "arousal": 0.3,
+          "valence": 0.9
+        },
+        "calm/agitated": {
+          "arousal": 0.95,
+          "valence": -0.1
+        },
+        "warm/cool": {
+          "arousal": 0.2,
+          "valence": 0.7
+        },
+        "serious/whimsical": {
+          "arousal": -0.2,
+          "valence": -0.6
+        },
+        "appealing/disgusting": {
+          "arousal": 0.1,
+          "valence": 0.85
+        },
+        "spicy/bland": {
+          "arousal": 0.8,
+          "valence": 0.3
+        },
+        "harmonious/dissonant": {
+          "arousal": -0.1,
+          "valence": 0.75
+        },
+        "liked/disliked": {
+          "arousal": 0.15,
+          "valence": 0.9
+        },
+        "strong/weak": {
+          "arousal": 0.85,
+          "valence": 0.4
+        },
+        "active/passive": {
+          "arousal": 0.9,
+          "valence": 0.35
+        }
+      }
+    },
+    "variance_explained": {
+      "affective_factors": {
+        "saturation": 72.2,
+        "lightness": 68.3,
+        "red_green": 58.3,
+        "yellow_blue": 33.3,
+        "average": 58.0
+      },
+      "music_perceptual_factors": {
+        "saturation": 40.3,
+        "lightness": 50.5,
+        "red_green": 59.1,
+        "yellow_blue": 20.4,
+        "average": 42.6
+      }
+    },
+    "emotion_clusters": {
+      "Set_1A": {
+        "description": "Spicy, loud, agitated, complex sounding music",
+        "color_profile": "More saturated, redder, darker",
+        "genres": [
+          "Heavy Metal",
+          "Punk",
+          "Dubstep",
+          "Rock",
+          "Alternative",
+          "Techno"
+        ],
+        "arousal": "high",
+        "valence": "negative/mixed"
+      },
+      "Set_1B": {
+        "description": "Appealing, harmonious, liked music",
+        "color_profile": "Lighter, somewhat greenish, somewhat desaturated",
+        "genres": [
+          "Piano",
+          "Mozart",
+          "Indie",
+          "Ambient",
+          "New Age",
+          "Blues",
+          "Classical - Bach",
+          "Chinese",
+          "Japanese"
+        ],
+        "arousal": "low",
+        "valence": "neutral/positive"
+      },
+      "Set_2": {
+        "description": "Happy, whimsical, warm sounding music",
+        "color_profile": "More saturated, yellower",
+        "genres": [
+          "Ska",
+          "Salsa",
+          "Funk",
+          "Disco",
+          "Pop",
+          "Country",
+          "Irish",
+          "Reggae",
+          "Soul",
+          "Latin",
+          "African",
+          "Indian"
+        ],
+        "arousal": "moderate-high",
+        "valence": "positive"
+      }
+    }
+  },
+  "methodology": {
+    "tasks": [
+      "A1: Music-to-color associations (3 best + 3 worst colors per genre)",
+      "A2: Color-emotion ratings (10 scales)",
+      "A3: Music-emotion ratings (10 scales)",
+      "A4: Synesthesia screening",
+      "B1: Music-perceptual ratings (15 scales, musicians)",
+      "C1: Color-perceptual ratings (4 dimensions, from Palmer 2013)"
+    ],
+    "analysis_methods": [
+      "Perceptual-MCA (weighted average of color-appearance ratings)",
+      "Emotional-MCA (weighted average of color-emotion ratings)",
+      "Partial correlations (emotional mediation hypothesis)",
+      "Parafac (parallel factor analysis) for dimensional compression",
+      "Multiple linear regression (MLR) for variance comparison"
+    ]
+  }
+}
